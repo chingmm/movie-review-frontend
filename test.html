@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //SIGNUP
+        // fetch("http://localhost:3000/auth/signup", {
+        //     method: "post",
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     },
+        //     body: JSON.stringify({username: "mike", password: "mike"})
+        // })
+        // .then(response =>response.json())
+        // .then(data=>console.log(data))
+
+        //LOGIN
+
+
+        // fetch("http://localhost:3000/auth/login", {
+        //     method: "post",
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     },
+        //     body: JSON.stringify({username: "mike", password: "mike"})
+        // })
+        // .then(response =>response.json())
+        // .then(data=>console.log(data))
+
+        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pa2UiLCJpYXQiOjE2MDM0ODU1OTR9.kqiKjGQIvIu8F8U92Y12jhOEYXxjvuWLc7ODjELmV6o"
+        
+        //Create
+
+
+        fetch("http://localhost:3000/note/", {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json", 
+                Authorization: `bearer ${token}`
+            },
+            body: JSON.stringify({note: "this is a note"})
+        })
+        .then(response =>response.json())
+        .then(data=>console.log(data))
+
+        </script>
+</body>
+</html>
