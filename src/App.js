@@ -4,7 +4,7 @@ import Header from "./components/Header"
 import Signup from "./pages/signup"
 import Login from "./pages/login"
 import Home from "./pages/home"
-import Dashboard from "./pages/dashboard"
+import Dashboard from "./pages/AuthLP"
 
 import {Route, Link, Switch} from "react-router-dom"
 import './App.css';
@@ -31,7 +31,7 @@ function App() {
     <GlobalCtx.Provider value = {{gState, setGState}} >
     <div className="App">
       <Link to = "/"> 
-      <h1>BOOK <span>MARKS </span></h1> </Link>
+      <h1>ZEN <span>MOVIE </span>REVIEWS</h1> </Link>
       <Header/>
       <main>
         <Switch>
