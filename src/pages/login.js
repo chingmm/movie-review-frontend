@@ -1,7 +1,7 @@
 import React from "react"
 import {GlobalCtx} from "../App"
 
-const Login = (props) => {
+const Signup = (props) => {
 
     const {gState, setGState} = React.useContext(GlobalCtx)
     const {url} = gState;
@@ -20,21 +20,19 @@ const Login = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault()
         const {username, password} = form;
-        
-        fetch(`${url}/auth/login`, {
+
+        fetch(`${url}/auth/signup`, {
              method: "post",
             headers: {
                 "Content-Type": "application/json"
            },
              body: JSON.stringify({username, password})
         })
-        .then((response) =>response.json())
-        .then((data)=> { 
+        .then(response =>response.json())
+        .then(data=> { 
             console.log(data);
-            window.localStorage.setItem("token", JSON.stringify(data))
-            setGState({...gState, token: data.token})
             setForm(blank)
-            props.history.push('/')
+            props.history.push('/login')
         
         })
         
@@ -43,12 +41,12 @@ const Login = (props) => {
         <div>
             <form onSubmit = {handleSubmit} >
                 <input type = "text" name = "username" value = {form.username} onChange={handleChange}/>
-                <input type = "password" name = "password" value = {form.passwprd} onChange={handleChange}/>
-                <input type = "submit" value = "login" />
+                <input type = "password" name = "password" value = {form.password} onChange={handleChange}/>
+                <input type = "submit" value = "signup" />
 
             </form>
         </div>
 
     )}
 
-export default Login 
+export default Signup 
