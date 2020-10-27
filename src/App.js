@@ -15,7 +15,7 @@ export const GlobalCtx = React.createContext(null)
 
 function App() {
 
-  const [gState, setGState] = React.useState({url: "https://zen-unit3-movies-review.herokuapp.com/", token: null, })
+  const [gState, setGState] = React.useState({url: "https://zen-unit3-movies-review.herokuapp.com", token: null, })
 
   //Seeing if already logged in
   React.useEffect(()=> {
