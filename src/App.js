@@ -4,12 +4,12 @@ import Header from "./components/Header"
 import Signup from "./pages/signup"
 import Login from "./pages/login"
 import Home from "./pages/home"
-import Dashboard from "./pages/dashboard"
+import Dashboard from "./pages/AuthLP"
 
 import {Route, Link, Switch} from "react-router-dom"
 import './App.css';
 
-// this is a test 
+
 
 export const GlobalCtx = React.createContext(null)
 
