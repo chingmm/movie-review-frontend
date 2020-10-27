@@ -5,68 +5,68 @@ const Dashboard = (props) => {
 
     const {gState, setGState} = React.useContext(GlobalCtx)
     const {url, token} = gState;
-    const [notes, setNotes] = React.useState(null)
+    const [movies, setMovies] = React.useState(null)
     const [updateID, setUpdateID] = React.useState(null)
 
 
-        const getNotes = async () => {
-            const response = await fetch (url + "/note/", {
+        const getMovies = async () => {
+            const response = await fetch (url + "/movie/", {
             method: "get",
             headers: {
                 Authorization: "bearer " + token
             }
         })
         const json = await response.json()
-        setNotes(json)
+        setMovies(json)
     }
      
     React.useEffect(()=> {
-        getNotes()}, [])
+        getMovies()}, [])
 
         const input = React.useRef(null)
         const update = React.useRef(null)
 
         const handleClick = (event) => {
-            const note = input.current.value
+            const movie = input.current.value
 
-        fetch(url + "/note/", {
+        fetch(url + "/movie/", {
             method: "post",
             headers: {
                 "Content-Type": "application/json", 
                 Authorization: `bearer ` + token
             },
-            body: JSON.stringify({note})
+            body: JSON.stringify({movie})
         })
         .then(response =>response.json())
         .then(data=>{
             input.current.value = ""
-            getNotes()
+            getMovies()
         })
 
         }
 
         const handleUpdate =  () => {
-            const note = update.current.value
+            const movie = update.current.value
 
-        fetch(url + "/note/" + updateID, {
+        fetch(url + "/movie/" + updateID, {
             method: "put",
             headers: {
                 "Content-Type": "application/json", 
                 Authorization: `bearer ` + token
             },
-            body: JSON.stringify({note})
+            body: JSON.stringify({movie})
         })
         .then(response =>response.json())
         .then(data=>{
             update.current.value = ""
             setUpdateID(null)
-            getNotes()
+            getMovies()
         })
 
         }
         const handleDelete = (id) => {
 
-        fetch(url + "/note/" + id, {
+        fetch(url + "/movie/" + id, {
             method: "delete",
             headers: {
                 Authorization: `bearer ` + token
@@ -74,33 +74,30 @@ const Dashboard = (props) => {
         })
         .then(response =>response.json())
         .then(data=>{
-            getNotes()
+            getMovies()
         })
     }
     return (
         <div>
             <form> 
-            
-            <input type = "text" placeholder = "Website" name = "note" ref = {input}/>
-            <input type = "text" placeholder = "Address" name = "url" ref = {input}/>
+            <input type = "text" placeholder = "title" name = "movie" ref = {input}/>
             </form>
             <button onClick = {handleClick}>ADD!</button>
+            
             <h2>Update Info Here!</h2>
+\
             <form>
-            <input type = "text" name = "note" ref = {update}/>
-            <input type = "text" name = "url" ref = {update}/>
+            <input type = "text" name = "movie" ref = {update}/>
             </form>
-           
-
             <button onClick = {handleUpdate}>Update</button>
             <ul>
-               {notes ? notes.map((note)=> (
+               {movies ? movies.map((movie)=> (
                <div className = "outputtxt">
-                   <li key = {note._id} >{note.note}</li>
+                   <li key = {movie._id} >{movie.movie}</li>
 
-                   <button onClick={()=> handleDelete(note._id)}>Delete</button><button onClick={()=>{
-                   setUpdateID(note._id)
-                   update.current.value = note.note}}>Edit</button></div>)) : null} 
+                   <button onClick={()=> handleDelete(movie._id)}>Delete</button><button onClick={()=>{
+                   setUpdateID(movie._id)
+                   update.current.value = movie.movie}}>Edit</button></div>)) : null} 
                
             </ul>
 
