@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: whitesmoke
 }
 
 .App-logo {
@@ -27,6 +28,45 @@
 .App-link {
   color: #61dafb;
 }
+
+.register-container{
+  display:flex;
+  /* background-color: #61dafb; */
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.register-form{
+  display:flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  flex-basis: 400px;
+  align-content: center;
+  justify-content: center;
+  padding-top: 0px;
+  border: 5px solid black;
+}
+
+.regform-signup{
+  /* display: flex;
+  flex-direction: column; */
+  text-align: left;
+  padding-left: 20px;
+}
+
+.login-btn{
+  display: flex;
+  width: 100px;
+  margin-left: 20px;
+  background-color: rgb(81, 81, 204); 
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
 
 @keyframes App-logo-spin {
   from {

@@ -22,12 +22,13 @@ const Dashboard = (props) => {
      
     React.useEffect(()=> {
         getMovies()}, [])
-
+        // const rated = React.useRef(null)
         const input = React.useRef(null)
         const update = React.useRef(null)
 
         const handleClick = (event) => {
             const movie = input.current.value
+            // const rated = input.current.value
 
         fetch(url + "/movie/", {
             method: "post",
@@ -35,7 +36,7 @@ const Dashboard = (props) => {
                 "Content-Type": "application/json", 
                 Authorization: "bearer " + token
             },
-            body: JSON.stringify({title: movie})
+            body: JSON.stringify({title: movie}, {rated: movie})
         })
         .then(response =>response.json())
         .then(data=>{
@@ -81,6 +82,7 @@ const Dashboard = (props) => {
         <div>
             <form> 
             <input type = "text" placeholder = "title" name = "movie" ref = {input}/>
+        
             </form>
             <button onClick = {handleClick}>ADD!</button>
             
@@ -94,6 +96,7 @@ const Dashboard = (props) => {
                {movies ? movies.map((movie)=> (
                <div className = "outputtxt">
                    <li key = {movie._id} >{movie.title}</li>
+                  
 
                    <button onClick={()=> handleDelete(movie._id)}>Delete</button><button onClick={()=>{
                    setUpdateID(movie._id)
