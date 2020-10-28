@@ -40,7 +40,7 @@ const Login = (props) => {
         
     }
     return ( 
-        <div>
+        <div className="login-form">
             <form onSubmit = {handleSubmit} >
                 <input type = "text" name = "username" value = {form.username} onChange={handleChange}/>
                 <input type = "password" name = "password" value = {form.password} onChange={handleChange}/>
