@@ -3,9 +3,10 @@ import logo from './logo.svg';
 import Header from "./components/Header"
 import Signup from "./pages/signup"
 import Login from "./pages/login"
-import Home from "./pages/home"
+import Home from "./pages/LandingPage"
 import Dashboard from "./pages/AuthLP"
 
+import Container from "react-bootstrap/Container"
 import {Route, Link, Switch} from "react-router-dom"
 import './App.css';
 
@@ -31,16 +32,25 @@ function App() {
   return (
     <GlobalCtx.Provider value = {{gState, setGState}} >
     <div className="App">
+    <Container fluid className="header-container">
+      <row >
       <Link to = "/"> 
-      <h1>MOVIES <span>REVIEWS </span></h1> </Link>
+      <h1 className="app-title">ZEN MOVIE <span>REVIEWS </span></h1> </Link>
+      </row>
+      </Container>
+
       <Header/>
+
       <main>
         <Switch>
           <Route exact path = "/" render = {(rp) => gState.token ? <Dashboard /> : <Home/>}/>
+
           <Route path = "/signup" render = {(rp) => <Signup {...rp} />}/>
+
           <Route path = "/login" render = {(rp) =>
           <Login {...rp} />}
           />
+          
           <Route path = "/dashboard" render = {(rp) => <h1>dashboard</h1>}/>
 
         </Switch>
