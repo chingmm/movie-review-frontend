@@ -16,6 +16,17 @@ export const GlobalCtx = React.createContext(null)
 function App() {
 
   const [gState, setGState] = React.useState({url: "http://localhost:3000", token: null, })
+  // const [selectedMovie, setSelectedMovie] = React.useState(emptyMovie) = {
+  //   title: "",
+  //   yearreleased: "",
+  //   rated: "",
+  //   genre: "",
+  //   director: "",
+  //   overallrating: "",
+  //   poster: "",
+  //   userreview: "",
+  // }
+
 
   //Seeing if already logged in
   React.useEffect(()=> {
