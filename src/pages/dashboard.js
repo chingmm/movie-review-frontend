@@ -35,7 +35,7 @@ const Dashboard = (props) => {
                 "Content-Type": "application/json", 
                 Authorization: `bearer ` + token
             },
-            body: JSON.stringify({movie})
+            body: JSON.stringify({title: movie})
         })
         .then(response =>response.json())
         .then(data=>{
@@ -93,11 +93,11 @@ const Dashboard = (props) => {
             <ul>
                {movies ? movies.map((movie)=> (
                <div className = "outputtxt">
-                   <li key = {movie._id} >{movie.movie}</li>
+                   <li key = {movie._id} >{movie.title}</li>
 
                    <button onClick={()=> handleDelete(movie._id)}>Delete</button><button onClick={()=>{
                    setUpdateID(movie._id)
-                   update.current.value = movie.movie}}>Edit</button></div>)) : null} 
+                   update.current.value = movie.title}}>Edit</button></div>)) : null} 
                
             </ul>
 
