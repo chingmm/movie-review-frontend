@@ -1,6 +1,7 @@
 import React from "react"
 import {GlobalCtx} from "../App"
-
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 const Login = (props) => {
 
     const {gState, setGState} = React.useContext(GlobalCtx)
@@ -40,15 +41,39 @@ const Login = (props) => {
         
     }
     return ( 
-        <div>
-            <form onSubmit = {handleSubmit} >
-                <input type = "text" name = "username" value = {form.username} onChange={handleChange}/>
-                <input type = "password" name = "password" value = {form.password} onChange={handleChange}/>
-                <input type = "submit" value = "login" />
+    <div>
+        <h1>
+            Welcome to Zen Movie Reviews
+        </h1>
+        <p> Let's get you started!</p>
+            
+            <div className="register-container">    
+            <Form className="register-form" onSubmit = {handleSubmit} >
+            
+                <h2 className="regform-signup"> Login</h2>
+                <Form.Group controlId="formBasicEmail">
+                <Form.Control className="input" type = "text" 
+                placeholder="Enter email"
+                name = "username" 
+                value = {form.username} onChange={handleChange}/>
+            </Form.Group>
 
-            </form>
+            <Form.Group             controlId="formBasicPassword">
+                <Form.Control 
+                type = "password"
+                placeholder="Enter password" 
+                name = "password" 
+                value = {form.password} onChange={handleChange}/>
+            </Form.Group>
+
+                <Button className = "login-btn" 
+                variant= "primary" type="submit"> 
+                Login
+                </Button>
+            </Form>
+
         </div>
-
+        </div>
     )}
 
 export default Login 
