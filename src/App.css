@@ -122,26 +122,35 @@
 
 .authlp-h3{
   display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  margin-inline-start: -900px;
-
-  
+  position: relative;
+  text-indent: 65px;
 }
 
 .makeStyles-root-1{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+ 
 }
 
 .add-movie{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   margin: auto;
+  width: 250px;
+  align-items: center;
 }
 
+#textarea {
+  min-width: 350px;
+  min-height: 100px;
+  font-family: serif;
+  font-size: 16px;
+  border-radius: 7px;
+  background-color:whitesmoke;
+  margin: auto;
+}
 
 
 

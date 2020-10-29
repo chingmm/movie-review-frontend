@@ -13,6 +13,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import BasicTextFields from "../components/textfield"
 import TextField from '@material-ui/core/TextField';
 import HoverRating from "../components/starRating"
+import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 
 
 const AuthLP = (props) => {
@@ -148,15 +149,14 @@ const AuthLP = (props) => {
                     <input type="submit" value="Find"></input>
                     </Form>
 
-                    <h3 className="authlp-h3"> List of Movies to Review </h3>
+                   
                     <Container className="images-carousel" >
+                    <h3 className="authlp-h3"> List of Movies to Review </h3>
                     <Row >
                     {/* <div > */}
                         <Col xs={6} md={4}>
                         <Image src="https://images-na.ssl-images-amazon.com/images/I/81lJ%2BkZrUqL.png" thumbnail />
-                        {/* <SimpleRating/> */}
                         <div><HoverRating /></div>
-                        
                         </Col>
                        
 
@@ -231,29 +231,29 @@ const AuthLP = (props) => {
 
             {/* CAN WE HAVE THIS SECTION BE DISPLAYED ON HERE UNDER A TITLE OF "ADD A MOVIE TO REVIEW LIST"? 
                     what if we have the update display on this page as well, but only after clicking on a button? */}
-       
-            <form className="add-movie"> 
-              
-                <TextField type = "text" placeholder = "title" name = "title" ref = {titleinput}/> 
-                
+       <div  className="add-movie">
+         <div>
+            <form > 
+                <TextField id="outlined-basic" type = "text" placeholder = "title" name = "title" ref = {titleinput}/> 
+                {/* <br></br> */}
                 <TextField type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedinput}/>
-    
+                <br></br>
                  <TextField type = "text" placeholder = "rated" name = "rated" ref = {ratedinput}/>
-                 
-               
+                 <br></br>
                 <TextField type = "text" placeholder = "genre" name = "genre" ref = {genreinput}/>
-                
+                <br></br>
                 <TextField type = "text" placeholder = "director" name = "director" ref = {directorinput}/>
-                
+                <br></br>
                 <TextField type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratinginput}/>
-               
+                <br></br>
                 <TextField type = "text" placeholder = "poster" name = "poster" ref = {posterinput}/>
-               
-                <TextField type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewinput}/>
-                
+                <br></br>
+                <div className="add-movie">
+                <TextareaAutosize  id="textarea" type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewinput}/>
+                </div>
             </form>
-       
-          
+            </div>
+            </div>
             <button onClick = {handleClick}>ADD!</button>
 
             {/* TURN THIS INTO A BUTTON that onClick displays the information below! */}
@@ -264,7 +264,7 @@ const AuthLP = (props) => {
 
  {/* CAN WE HIDE THIS INFORMATION UNTIL WE CLICK A BUTTON?
                     what if we have the update display on this page as well, but only after clicking on a button? */}
-
+    <div>
             <form>
             <TextField type = "text" placeholder = "title" name = "title" ref = {titleupdate}/>
             <TextField type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedupdate}/>
@@ -274,8 +274,8 @@ const AuthLP = (props) => {
             <TextField type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratingupdate}/>
             <TextField type = "text" placeholder = "poster" name = "poster" ref = {posterupdate}/>
             <TextField type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewupdate}/>
-
             </form>
+    </div>
             <button onClick = {handleUpdate}>Update</button>
             <ul>
                {movies ? movies.map((movie)=> (
