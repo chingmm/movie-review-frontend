@@ -81,7 +81,9 @@ const Signup = (props) => {
                         </Form>
                     </div>
                 </Col>
-                <div class="circle"></div>
+                <div class="circle">
+                    <h1>OR</h1>
+                </div>
                 <Col> 
                     <div className="box-outline">
                         <Form className="register-form" onSubmit = {handleSubmit} >

@@ -11,24 +11,12 @@ const Header = (props) => {
         setGState({...gState, token: null})
     }}   >Logout</h2></Link>)
 
-<<<<<<< HEAD
-    return ( 
-     <>
-        <div>ZEN MOVIE REVIEWS</div>
-        <nav>
-            <Link to="/signup"><h2>Signup</h2></Link>
-            <Link to="/login"><h2> Login</h2></Link>
-            {gState.token ? logout : null}
-        </nav>
-    </>
-=======
     return ( <nav>
         <Link to="/signup"><h2>Signup</h2></Link>
         <Link to="/login"><h2> Login</h2></Link>
         {gState.token ? logout : null}
 
     </nav>
->>>>>>> 83066b0e376f3eccada38817714c909b385f7252
     )}
 
 export default Header 
