@@ -93,7 +93,7 @@ const Dashboard = (props) => {
             <ul>
                {movies ? movies.map((movie)=> (
                <div className = "outputtxt">
-                   <li key = {movie._id} >{movie.movie}</li>
+                   <li key = {movie._id} >{movie.title}</li>
 
                    <button onClick={()=> handleDelete(movie._id)}>Delete</button><button onClick={()=>{
                    setUpdateID(movie._id)

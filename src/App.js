@@ -15,7 +15,7 @@ export const GlobalCtx = React.createContext(null)
 
 function App() {
 
-  const [gState, setGState] = React.useState({url: "https://zen-unit3-movies-review.herokuapp.com/", token: null, })
+  const [gState, setGState] = React.useState({url: "http://localhost:3000", token: null, })
 
   //Seeing if already logged in
   React.useEffect(()=> {
@@ -31,14 +31,14 @@ function App() {
     <GlobalCtx.Provider value = {{gState, setGState}} >
     <div className="App">
       <Link to = "/"> 
-      <h1>MOVIES <span>REVIEWS </span></h1> </Link>
+      <h1>ZEN <span>MOVIE </span>REVIEWS</h1> </Link>
       <Header/>
       <main>
         <Switch>
           <Route exact path = "/" render = {(rp) => gState.token ? <Dashboard /> : <Home/>}/>
           <Route path = "/signup" render = {(rp) => <Signup {...rp} />}/>
           <Route path = "/login" render = {(rp) => <Login {...rp} /> }/>
-          <Route path = "/dashboard" render = {(rp) => <h1>dashboard</h1>}/>
+          {/* <Route path = "/dashboard" render = {(rp) => <h1>dashboard</h1>}/> */}
 
         </Switch>
       </main>
