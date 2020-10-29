@@ -13,7 +13,7 @@ const Dashboard = (props) => {
             const response = await fetch (url + "/movie/", {
             method: "get",
             headers: {
-                Authorization: "bearer " + token
+                Authorization: `bearer ` + token
             }
         })
         const json = await response.json()
