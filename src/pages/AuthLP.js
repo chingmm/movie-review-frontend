@@ -231,11 +231,12 @@ const AuthLP = (props) => {
 
             {/* CAN WE HAVE THIS SECTION BE DISPLAYED ON HERE UNDER A TITLE OF "ADD A MOVIE TO REVIEW LIST"? 
                     what if we have the update display on this page as well, but only after clicking on a button? */}
+<div className="input-output">   
        <div  className="add-movie">
-         <div>
+         
             <form > 
                 <TextField id="outlined-basic" type = "text" placeholder = "title" name = "title" ref = {titleinput}/> 
-                {/* <br></br> */}
+                <br></br>
                 <TextField type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedinput}/>
                 <br></br>
                  <TextField type = "text" placeholder = "rated" name = "rated" ref = {ratedinput}/>
@@ -248,35 +249,17 @@ const AuthLP = (props) => {
                 <br></br>
                 <TextField type = "text" placeholder = "poster" name = "poster" ref = {posterinput}/>
                 <br></br>
-                <div className="add-movie">
+                <div  className="add-movie">
                 <TextareaAutosize  id="textarea" type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewinput}/>
-                </div>
+                </div>  
             </form>
-            </div>
-            </div>
             <button onClick = {handleClick}>ADD!</button>
+            </div>
+            
 
-            {/* TURN THIS INTO A BUTTON that onClick displays the information below! */}
-                <h2>Update Info Here!</h2>
-\
 
-{/* -------------------------UPDATE SECTION----------------------------- */}
-
- {/* CAN WE HIDE THIS INFORMATION UNTIL WE CLICK A BUTTON?
-                    what if we have the update display on this page as well, but only after clicking on a button? */}
-    <div>
-            <form>
-            <TextField type = "text" placeholder = "title" name = "title" ref = {titleupdate}/>
-            <TextField type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedupdate}/>
-            <TextField type = "text" placeholder = "rated" name = "rated" ref = {ratedupdate}/>
-            <TextField type = "text" placeholder = "genre" name = "genre" ref = {genreupdate}/>
-            <TextField type = "text" placeholder = "director" name = "director" ref = {directorupdate}/>
-            <TextField type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratingupdate}/>
-            <TextField type = "text" placeholder = "poster" name = "poster" ref = {posterupdate}/>
-            <TextField type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewupdate}/>
-            </form>
-    </div>
-            <button onClick = {handleUpdate}>Update</button>
+{/* ---------------------start of output div--------------------------------- */}
+    <div className="output">
             <ul>
                {movies ? movies.map((movie)=> (
                <div className = "outputtxt">
@@ -301,18 +284,37 @@ const AuthLP = (props) => {
                    directorupdate.current.value = movie.director
                    overallratingupdate.current.value = movie.overallrating
                    posterupdate.current.value = movie.poster
-                   userreviewupdate.current.value = movie.userreview
-                
-                
+                   userreviewupdate.current.value = movie.userreview           
                 }
-                   
-                   
-                   
-                   
-                   
+                 
                    }>Edit</button></div>)) : null} 
-               
             </ul>
+     </div>
+     </div>
+{/* -----------------------end of output--------------------------------- */}
+
+            {/* TURN THIS INTO A BUTTON that onClick displays the information below! */}
+                <h2>Update Info Here!</h2>
+\
+
+{/* -------------------------UPDATE SECTION----------------------------- */}
+
+ {/* CAN WE HIDE THIS INFORMATION UNTIL WE CLICK A BUTTON?
+                    what if we have the update display on this page as well, but only after clicking on a button? */}
+    <div>
+            <form>
+            <TextField type = "text" placeholder = "title" name = "title" ref = {titleupdate}/>
+            <TextField type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedupdate}/>
+            <TextField type = "text" placeholder = "rated" name = "rated" ref = {ratedupdate}/>
+            <TextField type = "text" placeholder = "genre" name = "genre" ref = {genreupdate}/>
+            <TextField type = "text" placeholder = "director" name = "director" ref = {directorupdate}/>
+            <TextField type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratingupdate}/>
+            <TextField type = "text" placeholder = "poster" name = "poster" ref = {posterupdate}/>
+            <TextField type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewupdate}/>
+            </form>
+    </div>
+            <button onClick = {handleUpdate}>Update</button>
+           
         </div>
     );
     }

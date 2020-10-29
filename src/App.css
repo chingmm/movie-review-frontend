@@ -143,15 +143,26 @@
 }
 
 #textarea {
+  display: flex;
   min-width: 350px;
   min-height: 100px;
   font-family: serif;
   font-size: 16px;
   border-radius: 7px;
   background-color:whitesmoke;
-  margin: auto;
+  /* margin-inline-start:45px; */
 }
 
+.input-output{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+
+}
+
+.output{
+  width: 750px;
+}
 
 
 
