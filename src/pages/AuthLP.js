@@ -1,7 +1,21 @@
 import React from "react"
+import Container from "react-bootstrap/Container"
+import Image from "react-bootstrap/Image"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import InputGroup from "react-bootstrap/InputGroup"
+import FormControl from "react-bootstrap/FormControl"
+import Button from "react-bootstrap/Button"
+import Form from "react-bootstrap/Form"
 import {GlobalCtx} from "../App"
+import { makeStyles } from '@material-ui/core/styles';
+// import { classes } from '@material-ui/core/styles';
+import BasicTextFields from "../components/textfield"
+import TextField from '@material-ui/core/TextField';
+import HoverRating from "../components/starRating"
 
-const Dashboard = (props) => {
+
+const AuthLP = (props) => {
 
     const {gState, setGState} = React.useContext(GlobalCtx)
     const {url, token} = gState;
@@ -126,29 +140,140 @@ const Dashboard = (props) => {
     }
     return (
         <div>
-            <form> 
-            <input type = "text" placeholder = "title" name = "title" ref = {titleinput}/>
-            <input type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedinput}/>
-            <input type = "text" placeholder = "rated" name = "rated" ref = {ratedinput}/>
-            <input type = "text" placeholder = "genre" name = "genre" ref = {genreinput}/>
-            <input type = "text" placeholder = "director" name = "director" ref = {directorinput}/>
-            <input type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratinginput}/>
-            <input type = "text" placeholder = "poster" name = "poster" ref = {posterinput}/>
-            <input type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewinput}/>
+
+            {/* MAKE PAGE LOOK LIKE THE ONE IN FIGMA */}
+{/* ----------------THIS IS THE "LIST OF MOVIES TO REVIEW SECTION"---------*/}
+                    <Form>
+                    <input type="text" placeholder="Look up a movie"></input>
+                    <input type="submit" value="Find"></input>
+                    </Form>
+
+                    <h3 className="authlp-h3"> List of Movies to Review </h3>
+                    <Container className="images-carousel" >
+                    <Row >
+                    {/* <div > */}
+                        <Col xs={6} md={4}>
+                        <Image src="https://images-na.ssl-images-amazon.com/images/I/81lJ%2BkZrUqL.png" thumbnail />
+                        {/* <SimpleRating/> */}
+                        <div><HoverRating /></div>
+                        
+                        </Col>
+                       
+
+                        <Col xs={6} md={4}>
+                        <Image src="https://www.reviewsphere.org/wp-content/uploads/2020/02/The-Gentlemen-2019.jpg" thumbnail />
+                        <div><HoverRating /></div>
+                        </Col>
+
+                        <Col xs={6} md={4}>
+                        <Image src="https://nowplayingpodcast.com/images/posters/Godfather3.jpg" thumbnail />
+                        <div><HoverRating /></div>
+                        </Col>
+
+                        <Col xs={6} md={4}>
+                        <Image src="https://upload.wikimedia.org/wikipedia/en/e/e6/Enola_Holmes_poster.jpeg" thumbnail />
+                        <div><HoverRating /></div>
+                        </Col>
+
+                        <Col xs={6} md={4}>
+                        <Image src="https://i.pinimg.com/originals/92/c8/e0/92c8e00b34fcfdeaf605a0647c21adb3.jpg" thumbnail />
+                        <div><HoverRating /></div>
+                        </Col>
+                    {/* </div> */}
+                    </Row>
+                    </Container>
+                    
+                    <br></br>
+                    <br></br>
+
+{/*--------------------- THIS IS THE "MY REVIEW LIST" SECTION-------------- */}
+
+                    <h3 className="authlp-h3"> My Reviewed Movies List </h3>
+                    <Container className="images-carousel" >
+                    <Row >
+                    {/* <div > */}
+                        <Col xs={6} md={4}>
+                        <Image src="https://images-na.ssl-images-amazon.com/images/I/81lJ%2BkZrUqL.png" thumbnail />
+                        <div><HoverRating /></div>
+                        </Col>
+
+                        <Col xs={6} md={4}>
+                        <Image src="https://www.reviewsphere.org/wp-content/uploads/2020/02/The-Gentlemen-2019.jpg" thumbnail />
+                        <div><HoverRating /></div>
+                        </Col>
+
+                        <Col xs={6} md={4}>
+                        <Image src="https://nowplayingpodcast.com/images/posters/Godfather3.jpg" thumbnail />
+                        <div><HoverRating /></div>
+                        </Col>
+
+                        <Col xs={6} md={4}>
+                        <Image src="https://upload.wikimedia.org/wikipedia/en/e/e6/Enola_Holmes_poster.jpeg" thumbnail />
+                        <div><HoverRating /></div>
+                        </Col>
+
+                        <Col xs={6} md={4}>
+                        <Image src="https://i.pinimg.com/originals/92/c8/e0/92c8e00b34fcfdeaf605a0647c21adb3.jpg" thumbnail />
+                        <div><HoverRating /></div>
+                        </Col>
+
+                    {/* </div> */}
+                    </Row>
+                    </Container>
+                    <br></br>
+                    <br></br>
+
+                    {/* THIS IS THE "LIST OF MOVIES TO REVIEW SECTION" */}
+
+            {/* MAKE PAGE LOOK LIKE THE ONE IN FIGMA */}
+
+{/* -------------------------ADD SECTION----------------------------- */}
+
+            {/* CAN WE HAVE THIS SECTION BE DISPLAYED ON HERE UNDER A TITLE OF "ADD A MOVIE TO REVIEW LIST"? 
+                    what if we have the update display on this page as well, but only after clicking on a button? */}
+       
+            <form className="add-movie"> 
+              
+                <TextField type = "text" placeholder = "title" name = "title" ref = {titleinput}/> 
+                
+                <TextField type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedinput}/>
+    
+                 <TextField type = "text" placeholder = "rated" name = "rated" ref = {ratedinput}/>
+                 
+               
+                <TextField type = "text" placeholder = "genre" name = "genre" ref = {genreinput}/>
+                
+                <TextField type = "text" placeholder = "director" name = "director" ref = {directorinput}/>
+                
+                <TextField type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratinginput}/>
+               
+                <TextField type = "text" placeholder = "poster" name = "poster" ref = {posterinput}/>
+               
+                <TextField type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewinput}/>
+                
             </form>
+       
+          
             <button onClick = {handleClick}>ADD!</button>
-            
-            <h2>Update Info Here!</h2>
+
+            {/* TURN THIS INTO A BUTTON that onClick displays the information below! */}
+                <h2>Update Info Here!</h2>
 \
+
+{/* -------------------------UPDATE SECTION----------------------------- */}
+
+ {/* CAN WE HIDE THIS INFORMATION UNTIL WE CLICK A BUTTON?
+                    what if we have the update display on this page as well, but only after clicking on a button? */}
+
             <form>
-            <input type = "text" placeholder = "title" name = "title" ref = {titleupdate}/>
-            <input type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedupdate}/>
-            <input type = "text" placeholder = "rated" name = "rated" ref = {ratedupdate}/>
-            <input type = "text" placeholder = "genre" name = "genre" ref = {genreupdate}/>
-            <input type = "text" placeholder = "director" name = "director" ref = {directorupdate}/>
-            <input type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratingupdate}/>
-            <input type = "text" placeholder = "poster" name = "poster" ref = {posterupdate}/>
-            <input type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewupdate}/>
+            <TextField type = "text" placeholder = "title" name = "title" ref = {titleupdate}/>
+            <TextField type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedupdate}/>
+            <TextField type = "text" placeholder = "rated" name = "rated" ref = {ratedupdate}/>
+            <TextField type = "text" placeholder = "genre" name = "genre" ref = {genreupdate}/>
+            <TextField type = "text" placeholder = "director" name = "director" ref = {directorupdate}/>
+            <TextField type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratingupdate}/>
+            <TextField type = "text" placeholder = "poster" name = "poster" ref = {posterupdate}/>
+            <TextField type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewupdate}/>
 
             </form>
             <button onClick = {handleUpdate}>Update</button>
@@ -192,4 +317,4 @@ const Dashboard = (props) => {
     );
     }
 
-export default Dashboard 
+export default AuthLP 

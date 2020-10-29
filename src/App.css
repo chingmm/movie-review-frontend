@@ -84,8 +84,9 @@
 .images-carousel{
   align-content: center;
 }
-.images-carousel img{
-  display: flex;
+
+.img-thumbnail {
+  /* display: flex; */
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 150px;
@@ -93,10 +94,17 @@
   height: 150px;
   padding: 15px;
   justify-content: center;
+  align-items: center;
 }
+
+.img-thumbnail img{
+  align-self: center;
+}
+
 .row {
   display:flex;
   flex-direction: row;
+  flex-wrap: wrap;
   border: 1px solid black;
   /* background-color: cadetblue; */
   width: 75%;
@@ -106,11 +114,33 @@
 
 }
 
-.col-md-4-col-6 img {
+.col  {
   border: 5px solid black;
   background-color: blue;
 }
 
+
+.authlp-h3{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-inline-start: -900px;
+
+  
+}
+
+.makeStyles-root-1{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.add-movie{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
 
 
 

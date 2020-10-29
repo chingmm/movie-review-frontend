@@ -4,13 +4,15 @@ import Header from "./components/Header"
 import Signup from "./pages/signup"
 import Login from "./pages/login"
 import Home from "./pages/LandingPage"
-import Dashboard from "./pages/AuthLP"
+import AuthLP from "./pages/AuthLP"
 
 import Container from "react-bootstrap/Container"
 import {Route, Link, Switch} from "react-router-dom"
 import './App.css';
-
-
+import Movie_component from './pages/movie_component';
+import User_reviews from './pages/user_reviews';
+import AuthMC from './pages/AuthMC';
+import starRating from "./components/starRating"
 
 export const GlobalCtx = React.createContext(null)
 
@@ -43,7 +45,7 @@ function App() {
 
       <main>
         <Switch>
-          <Route exact path = "/" render = {(rp) => gState.token ? <Dashboard /> : <Home/>}/>
+          <Route exact path = "/" render = {(rp) => gState.token ? <AuthLP /> : <Home/>}/>
 
           <Route path = "/signup" render = {(rp) => <Signup {...rp} />}/>
 
@@ -51,7 +53,16 @@ function App() {
           <Login {...rp} />}
           />
           
-          <Route path = "/dashboard" render = {(rp) => <h1>dashboard</h1>}/>
+          <Route path = "/authlp" render = {(rp) => <h1>dashboard</h1>}/>
+
+          <Route path = "/movcomp" render = {(rp) => <Movie_component {...rp} /> }
+          />
+
+          <Route path = "/userreviews" render = {(rp) => <User_reviews {...rp} /> }
+          />
+
+          <Route path = "/userreviews/:id" render = {(rp) => <AuthMC {...rp} /> }
+          />
 
         </Switch>
       </main>
