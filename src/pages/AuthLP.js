@@ -154,30 +154,57 @@ const AuthLP = (props) => {
                     <h3 className="authlp-h3"> List of Movies to Review </h3>
                     <Row >
                     {/* <div > */}
-                        <Col xs={6} md={4}>
+                        <Col className = "col-md-4-col-6" xs={6} md={4}>
                         <Image src="https://images-na.ssl-images-amazon.com/images/I/81lJ%2BkZrUqL.png" thumbnail />
-                        <div><HoverRating /></div>
+                        <div className="carousel-bottom">
+                            <h4>movie name</h4>
+                            <button className="watch">Watch Trailer</button>
+                            <HoverRating />
+                            <button className="review">Review this movie </button>
+
+                        </div>
                         </Col>
                        
 
-                        <Col xs={6} md={4}>
+                        <Col className = "col-md-4-col-6" xs={6} md={4}>
                         <Image src="https://www.reviewsphere.org/wp-content/uploads/2020/02/The-Gentlemen-2019.jpg" thumbnail />
-                        <div><HoverRating /></div>
+                        <div>
+                            <h4>movie name</h4>
+                            <button className="watch">Watch Trailer</button>
+                            <HoverRating />
+                            <button className="review">Review this movie </button>
+                        </div>
                         </Col>
 
-                        <Col xs={6} md={4}>
+                        <Col className = "col-md-4-col-6" xs={6} md={4}>
                         <Image src="https://nowplayingpodcast.com/images/posters/Godfather3.jpg" thumbnail />
-                        <div><HoverRating /></div>
+                        <div>
+                            <h4>movie name</h4>
+                            <button className="watch">Watch Trailer</button>
+                            <HoverRating />
+                            <button className="review">Review this movie </button>
+                        </div>
                         </Col>
 
-                        <Col xs={6} md={4}>
+
+                        <Col className = "col-md-4-col-6" xs={6} md={4}>
                         <Image src="https://upload.wikimedia.org/wikipedia/en/e/e6/Enola_Holmes_poster.jpeg" thumbnail />
-                        <div><HoverRating /></div>
+                        <div>
+                            <h4>movie name</h4>
+                            <button className="watch">Watch Trailer</button>
+                            <HoverRating />
+                            <button className="review">Review this movie </button>
+                        </div>
                         </Col>
 
-                        <Col xs={6} md={4}>
+                        <Col className = "col-md-4-col-6" xs={6} md={4}>
                         <Image src="https://i.pinimg.com/originals/92/c8/e0/92c8e00b34fcfdeaf605a0647c21adb3.jpg" thumbnail />
-                        <div><HoverRating /></div>
+                        <div>
+                            <h4>movie name</h4>
+                            <button className="watch">Watch Trailer</button>
+                            <HoverRating />
+                            <button className="review">Review this movie </button>
+                        </div>
                         </Col>
                     {/* </div> */}
                     </Row>
@@ -188,42 +215,7 @@ const AuthLP = (props) => {
 
 {/*--------------------- THIS IS THE "MY REVIEW LIST" SECTION-------------- */}
 
-                    <h3 className="authlp-h3"> My Reviewed Movies List </h3>
-                    <Container className="images-carousel" >
-                    <Row >
-                    {/* <div > */}
-                        <Col xs={6} md={4}>
-                        <Image src="https://images-na.ssl-images-amazon.com/images/I/81lJ%2BkZrUqL.png" thumbnail />
-                        <div><HoverRating /></div>
-                        </Col>
-
-                        <Col xs={6} md={4}>
-                        <Image src="https://www.reviewsphere.org/wp-content/uploads/2020/02/The-Gentlemen-2019.jpg" thumbnail />
-                        <div><HoverRating /></div>
-                        </Col>
-
-                        <Col xs={6} md={4}>
-                        <Image src="https://nowplayingpodcast.com/images/posters/Godfather3.jpg" thumbnail />
-                        <div><HoverRating /></div>
-                        </Col>
-
-                        <Col xs={6} md={4}>
-                        <Image src="https://upload.wikimedia.org/wikipedia/en/e/e6/Enola_Holmes_poster.jpeg" thumbnail />
-                        <div><HoverRating /></div>
-                        </Col>
-
-                        <Col xs={6} md={4}>
-                        <Image src="https://i.pinimg.com/originals/92/c8/e0/92c8e00b34fcfdeaf605a0647c21adb3.jpg" thumbnail />
-                        <div><HoverRating /></div>
-                        </Col>
-
-                    {/* </div> */}
-                    </Row>
-                    </Container>
-                    <br></br>
-                    <br></br>
-
-                    {/* THIS IS THE "LIST OF MOVIES TO REVIEW SECTION" */}
+                  
 
             {/* MAKE PAGE LOOK LIKE THE ONE IN FIGMA */}
 
@@ -231,24 +223,27 @@ const AuthLP = (props) => {
 
             {/* CAN WE HAVE THIS SECTION BE DISPLAYED ON HERE UNDER A TITLE OF "ADD A MOVIE TO REVIEW LIST"? 
                     what if we have the update display on this page as well, but only after clicking on a button? */}
-<div className="input-output">   
+ <h3 className="authlp-h3"> My Reviewed Movies List </h3> 
+<div className="input-output"> 
+    
        <div  className="add-movie">
          
             <form > 
-                <TextField id="outlined-basic" type = "text" placeholder = "title" name = "title" ref = {titleinput}/> 
-                <br></br>
-                <TextField type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedinput}/>
-                <br></br>
-                 <TextField type = "text" placeholder = "rated" name = "rated" ref = {ratedinput}/>
-                 <br></br>
-                <TextField type = "text" placeholder = "genre" name = "genre" ref = {genreinput}/>
-                <br></br>
-                <TextField type = "text" placeholder = "director" name = "director" ref = {directorinput}/>
-                <br></br>
-                <TextField type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratinginput}/>
-                <br></br>
-                <TextField type = "text" placeholder = "poster" name = "poster" ref = {posterinput}/>
-                <br></br>
+                <InputGroup className="mb-3">
+                <input type = "text" placeholder = "title" name = "title" ref = {titleinput}/> </InputGroup>
+                <InputGroup className="mb-3">
+                <input type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedinput}/></InputGroup>
+                <InputGroup className="mb-3">
+                 <input type = "text" placeholder = "rated" name = "rated" ref = {ratedinput}/></InputGroup>
+                 <InputGroup className="mb-3">
+                <input type = "text" placeholder = "genre" name = "genre" ref = {genreinput}/></InputGroup>
+                <InputGroup className="mb-3">
+                <input type = "text" placeholder = "director" name = "director" ref = {directorinput}/></InputGroup>
+                <InputGroup className="mb-3">
+                <input type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratinginput}/>
+                <InputGroup className="mb-3"></InputGroup>
+                <input type = "text" placeholder = "poster" name = "poster" ref = {posterinput}/></InputGroup>
+              
                 <div  className="add-movie">
                 <TextareaAutosize  id="textarea" type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewinput}/>
                 </div>  

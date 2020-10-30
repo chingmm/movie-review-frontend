@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: whitesmoke;
+  /* background-color: black; */
   height: 300px;
 }
 
@@ -81,31 +81,54 @@
  text-decoration: none;
 }
 
-.images-carousel{
-  align-content: center;
+
+
+
+
+.authlp-h3{
+  display: flex;
+  position: relative;
+  align-content: right;
+  text-indent: 65px;
+  padding: 0px;
+  margin: 0px;
 }
 
-.img-thumbnail {
-  /* display: flex; */
-  flex-direction: row;
+.authlp-h3-p{
+  display: flex;
+  position: relative;
+  align-content: right;
+  text-indent: 65px;
+  padding: 0px;
+  margin-top: 2px;
+  margin-bottom: 7px;
+}
+
+.authlp-login{
+  display: flex;
+  position: relative;
+  align-content: right;
+  text-indent: 65px;
+  padding: 0px;
+  margin-top: 4px;
+}
+
+.makeStyles-root-1{
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  max-width: 150px;
-  min-width: 50px;
-  height: 150px;
-  padding: 15px;
-  justify-content: center;
   align-items: center;
+  margin: auto;
+ 
 }
 
-.img-thumbnail img{
-  align-self: center;
-}
+/* AuthLP - List of movies to review */
 
 .row {
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   /* background-color: cadetblue; */
   width: 75%;
   margin:auto;
@@ -114,25 +137,58 @@
 
 }
 
-.col  {
-  border: 5px solid black;
-  background-color: blue;
+.images-carousel{
+  align-content: center;
 }
 
-
-.authlp-h3{
+.img-thumbnail {
   display: flex;
-  position: relative;
-  text-indent: 65px;
-}
-
-.makeStyles-root-1{
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 185px;
+  min-width: 50px;
+  height: 250px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red */
+}
+
+.img-thumbnail img{
+  align-self: center;
+  max-width:200px;
  
 }
 
+.col-md-4-col-6  {
+  display: flex;
+  flex-direction: column;
+  background-color:lightgrey; 
+  height: 480px;
+  margin: 5px;
+  align-items: stretch;
+}
+
+.carousel-bottom{
+  border-radius: 16px;
+}
+
+.watch{
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.review{
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: lightskyblue;
+}
+
+
+/* -------- */
+
+/* AuthLP - Add new movie section */
 .add-movie{
   display: flex;
   flex-direction: column;
@@ -163,6 +219,9 @@
 .output{
   width: 750px;
 }
+
+
+
 
 
 
