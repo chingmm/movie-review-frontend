@@ -1,6 +1,12 @@
 import React from "react"
 import {Link} from "react-router-dom"
 import {GlobalCtx} from "../App"
+import Navbar from "react-bootstrap/Navbar"
+import Nav from "react-bootstrap/Nav"
+import Form from "react-bootstrap/Form"
+import FormControl from "react-bootstrap/FormControl"
+import Button from "react-bootstrap/Button"
+
 
 const Header = (props) => {
 
@@ -11,13 +17,26 @@ const Header = (props) => {
         setGState({...gState, token: null})
     }}   >Logout</h2></Link>)
 
-    return ( <nav>
-        <Link to="/signup"><h2>Signup</h2></Link>
-        <Link to="/login"><h2> Login</h2></Link>
-        {gState.token ? logout : null}
+    return ( 
+    // <nav>
+    //     <Link to="/register"><h2>Signup/Login</h2></Link>
+    //     {/* <Link to="/login"><h2> Login</h2></Link> */}
+    //     {gState.token ? logout : null}
 
-    </nav>
+    // </nav>
+    <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="/lp">Home</Navbar.Brand>
+        <Nav className="mr-auto">
+            <Nav.Link href="#features">Movie Reviews</Nav.Link>
+            <Nav.Link href="/register">Signup/Login</Nav.Link>
+        </Nav>
+        <Form inline>
+        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+        <Button variant="outline-info">Search</Button>
+        </Form>
+  </Navbar>
+
+    
     )}
 
 export default Header 
-//HELLOOOOOOOO
