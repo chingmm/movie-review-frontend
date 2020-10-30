@@ -1,7 +1,7 @@
 import React from "react"
 import {GlobalCtx} from "../App"
 
-const Dashboard = (props) => {
+const AuthLP = (props) => {
 
     const {gState, setGState} = React.useContext(GlobalCtx)
     const {url, token} = gState;
@@ -192,4 +192,4 @@ const Dashboard = (props) => {
     );
     }
 
-export default Dashboard 
+export default AuthLP 
