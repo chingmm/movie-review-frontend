@@ -1,5 +1,6 @@
 import React from "react"
 import {GlobalCtx} from "../App"
+import HeaderLogout from "../components/HeaderLogout"
 
 const AuthLP = (props) => {
 
@@ -126,6 +127,7 @@ const AuthLP = (props) => {
     }
     return (
         <div>
+            <HeaderLogout />
             <form> 
             <input type = "text" placeholder = "title" name = "title" ref = {titleinput}/>
             <input type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedinput}/>
