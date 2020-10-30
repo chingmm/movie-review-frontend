@@ -3,7 +3,7 @@
 
 .App {
   text-align: center;
-  background-color: whitesmoke;
+  /* background-color: black; */
   height: 300px;
 }
 
@@ -129,24 +129,60 @@ img {
  text-decoration: none;
 }
 
-.images-carousel{
-  align-content: center;
-}
-.images-carousel img{
+
+
+
+
+.authlp-h3{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 150px;
-  min-width: 50px;
-  height: 150px;
-  padding: 15px;
-  justify-content: center;
+  position: relative;
+  align-content: right;
+  text-indent: 65px;
+  padding: 0px;
+  margin: 0px;
 }
+
+.authlp-h3-p{
+  display: flex;
+  position: relative;
+  align-content: right;
+  text-indent: 65px;
+  padding: 0px;
+  margin-top: 2px;
+  margin-bottom: 7px;
+}
+
+.authlp-login{
+  display: flex;
+  position: relative;
+  align-content: right;
+  text-indent: 65px;
+  padding: 0px;
+  margin-top: 4px;
+}
+
+.makeStyles-root-1{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+ 
+}
+
+/* AuthLP - List of movies to review */
+
 .row {
   display:flex;
   flex-direction: row;
+<<<<<<< HEAD
   border: 1px solid black;
   background-color: cadetblue;
+=======
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
+  /* background-color: cadetblue; */
+>>>>>>> idaEdits
   width: 75%;
   margin:auto;
   justify-content: center;
@@ -154,14 +190,106 @@ img {
 
 }
 
-.col-md-4-col-6 img {
-  border: 5px solid black;
-  background-color: blue;
+.images-carousel{
+  align-content: center;
+}
+
+.img-thumbnail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 185px;
+  min-width: 50px;
+  height: 250px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red */
+}
+
+.img-thumbnail img{
+  align-self: center;
+  max-width:200px;
+ 
+}
+
+.col-md-4-col-6  {
+  display: flex;
+  flex-direction: column;
+  background-color:lightgrey; 
+  height: 480px;
+  margin: 5px;
+  align-items: stretch;
+}
+
+.carousel-bottom{
+  border-radius: 16px;
+}
+
+.watch{
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+<<<<<<< HEAD
+ */
+=======
+.review{
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: lightskyblue;
 }
 
 
+/* -------- */
 
- */
+/* AuthLP - Add new movie section */
+.add-movie{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* margin: auto; */
+  /* width: 250px; */
+  align-items: center;
+}
+
+#textarea {
+  display: flex;
+  min-width: 350px;
+  min-height: 100px;
+  font-family: serif;
+  font-size: 16px;
+  border-radius: 7px;
+  background-color:whitesmoke;
+  /* margin-inline-start:45px; */
+}
+
+.input-output{
+  display: grid;
+  /* flex-direction: row; */
+  grid-template-columns: 1fr 2fr;
+  margin: auto;
+  /* background-color: black; */
+  margin:15px;
+
+}
+
+.output{
+  /* width: 750px; */
+  background-color: rgb(97, 23, 23);
+}
+
+.Modal-btn{
+  background-color: tomato;
+}
+
+
+.modal-pop{
+  background-color: teal;
+}
+
+>>>>>>> idaEdits
 
 
 @keyframes App-logo-spin {
