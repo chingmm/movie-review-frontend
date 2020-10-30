@@ -2,7 +2,11 @@ import React from "react"
 import {GlobalCtx} from "../App"
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+<<<<<<< HEAD
 import Col from 'react-bootstrap/Col'
+=======
+
+>>>>>>> mching
 const Login = (props) => {
 
     const {gState, setGState} = React.useContext(GlobalCtx)
