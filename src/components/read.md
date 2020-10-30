@@ -13,6 +13,6 @@
 <li> login.js -- JOANNE</li>
 <li> signup.js -- JOANNE</li>
 <li> movie_component.js -- JOANNE </li>
-<li> user_review.js -- </li>
+<li> user_review.js -- IDA</li>
 
 </ul>

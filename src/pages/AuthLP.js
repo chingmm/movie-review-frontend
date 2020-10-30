@@ -14,6 +14,10 @@ import BasicTextFields from "../components/textfield"
 import TextField from '@material-ui/core/TextField';
 import HoverRating from "../components/starRating"
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
+import  Modal  from "react-bootstrap/Modal"
+import ModalDialog from "react-bootstrap/esm/ModalDialog"
+import UpdateModal from "../components/update_modal"
+
 
 
 const AuthLP = (props) => {
@@ -217,7 +221,6 @@ const AuthLP = (props) => {
 
                   
 
-            {/* MAKE PAGE LOOK LIKE THE ONE IN FIGMA */}
 
 {/* -------------------------ADD SECTION----------------------------- */}
 
@@ -264,13 +267,16 @@ const AuthLP = (props) => {
                    <li key = {movie._id} >{movie.genre}</li>
                    <li key = {movie._id} >{movie.director}</li>
                    <li key = {movie._id} >{movie.overallrating}</li>
-                   <li key = {movie._id} >{movie.poster}</li>
+                   <li key = {movie._id} ><img src= {`${movie.poster}`} /> </li>
                    <li key = {movie._id} >{movie.userreview}</li>
 
 
                    {/* <li key = {movie._id} >{movie.rated}</li> */}
 
-                   <button onClick={()=> handleDelete(movie._id)}>Delete</button><button onClick={()=>{
+                   <button onClick={()=> handleDelete(movie._id)}>Delete</button>
+                   
+
+                   {/* <button onClick={()=>{
                    setUpdateID(movie._id)
                    titleupdate.current.value = movie.title
                    yearreleasedupdate.current.value = movie.yearreleased
@@ -282,35 +288,42 @@ const AuthLP = (props) => {
                    userreviewupdate.current.value = movie.userreview           
                 }
                  
-                   }>Edit</button></div>)) : null} 
+                   }>Edit</button> */}
+                   <UpdateModal/>
+                   </div>)) : null} 
             </ul>
      </div>
+
+    
      </div>
 {/* -----------------------end of output--------------------------------- */}
 
-            {/* TURN THIS INTO A BUTTON that onClick displays the information below! */}
                 <h2>Update Info Here!</h2>
 \
 
 {/* -------------------------UPDATE SECTION----------------------------- */}
-
- {/* CAN WE HIDE THIS INFORMATION UNTIL WE CLICK A BUTTON?
-                    what if we have the update display on this page as well, but only after clicking on a button? */}
     <div>
-            <form>
-            <TextField type = "text" placeholder = "title" name = "title" ref = {titleupdate}/>
-            <TextField type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedupdate}/>
-            <TextField type = "text" placeholder = "rated" name = "rated" ref = {ratedupdate}/>
-            <TextField type = "text" placeholder = "genre" name = "genre" ref = {genreupdate}/>
-            <TextField type = "text" placeholder = "director" name = "director" ref = {directorupdate}/>
-            <TextField type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratingupdate}/>
-            <TextField type = "text" placeholder = "poster" name = "poster" ref = {posterupdate}/>
-            <TextField type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewupdate}/>
-            </form>
-    </div>
-            <button onClick = {handleUpdate}>Update</button>
-           
+
+
+            {/* <form>
+            <input type = "text" placeholder = "title" name = "title" ref = {titleupdate}/>
+            <input type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedupdate}/>
+            <input type = "text" placeholder = "rated" name = "rated" ref = {ratedupdate}/>
+            <input type = "text" placeholder = "genre" name = "genre" ref = {genreupdate}/>
+            <input type = "text" placeholder = "director" name = "director" ref = {directorupdate}/>
+            <input type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratingupdate}/>
+           <input type = "text" placeholder = "poster" name = "poster" ref = {posterupdate}/>
+            <input type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewupdate}/>
+
+            </form> */}
+
+            </div>
+            <button onClick = {handleUpdate}> Save Changes </button>
+    
         </div>
+       
+        
+        
     );
     }
 

@@ -193,8 +193,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: auto;
-  width: 250px;
+  /* margin: auto; */
+  /* width: 250px; */
   align-items: center;
 }
 
@@ -210,18 +210,28 @@
 }
 
 .input-output{
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  /* flex-direction: row; */
+  grid-template-columns: 1fr 2fr;
   margin: auto;
+  /* background-color: black; */
+  margin:15px;
 
 }
 
 .output{
-  width: 750px;
+  /* width: 750px; */
+  background-color: rgb(97, 23, 23);
+}
+
+.Modal-btn{
+  background-color: tomato;
 }
 
 
-
+.modal-pop{
+  background-color: teal;
+}
 
 
 
