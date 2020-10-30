@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import Header from "./components/Header"
 import Signup from "./pages/signup"
@@ -10,6 +10,9 @@ import UserReview from "./pages/userReview"
 import AuthMC from './pages/AuthMC'
 import Title from './components/Title'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import MovieResults from "./pages/MovieResults"
+import MovieSearch from "./pages/MovieSearch"
+import {getPoster, getSearchedInfo, getMovie } from './services/apihelper'
 
 import Container from "react-bootstrap/Container"
 import {Route, Link, Switch} from "react-router-dom"
@@ -26,6 +29,7 @@ function App() {
 
   const [gState, setGState] = React.useState({url: "https://zen-unit3-movies-review.herokuapp.com", token: null, })
 
+
   //Seeing if already logged in
   React.useEffect(()=> {
     const token = JSON.parse(window.localStorage.getItem('token'))
@@ -35,6 +39,34 @@ function App() {
     }
 
   }, [])
+
+  // Movie Search
+  const [searchInput, setSearchInput] = useState("")
+
+
+  const [pageType, setPageType] = useState({
+    viewType: "movie",
+    Movies: []
+  })
+
+
+  const handleChange = (e) => {
+    let value = e.target.value;
+    setSearchInput(value)
+  }
+
+
+  const handleClick = async (e) => {
+    e.preventDefault();
+
+
+    let newPage = await getSearchedInfo(pageType.viewType, searchInput);
+    setPageType(prev => ({
+      viewType: prev.viewType,
+      Movies: newPage.results
+    }))
+  }
+  
 
   return (
     <GlobalCtx.Provider value = {{gState, setGState}} >
@@ -65,7 +97,30 @@ function App() {
           <Route path = "/userreviews/:id" render = {(rp) => <AuthMC {...rp} />}/>
 
         </Switch>
+
+        <Route path = "/" render = {(rp) => <MovieSearch {...rp} 
+            searchInput={searchInput}
+            handleClick={handleClick}
+            handleChange={handleChange}
+            getPoster={getPoster}
+            pageType={pageType}
+            getMovie={getMovie}
+            setPageType={setPageType}
+          />}/>
+
+          <Route path = "/" render = {(rp) =>
+            <MovieResults {...rp} 
+            searchInput={searchInput}
+            handleClick={handleClick}
+            handleChange={handleChange}
+            getPoster={getPoster}
+            pageType={pageType}
+            setPageType={setPageType}
+            />}
+          />
+          
       </main>
+
     </div>
     </GlobalCtx.Provider>
 
