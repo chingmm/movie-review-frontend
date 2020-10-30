@@ -27,8 +27,9 @@ const Header = (props) => {
     <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="/lp">Home</Navbar.Brand>
         <Nav className="mr-auto">
-            <Nav.Link href="#features">Movie Reviews</Nav.Link>
-            <Nav.Link href="/register">Signup/Login</Nav.Link>
+            <Nav.Link href="/movcomp">Movie Reviews</Nav.Link>
+            <Nav.Link href="/signup">Signup</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
         </Nav>
         <Form inline>
         <FormControl type="text" placeholder="Search" className="mr-sm-2" />

@@ -54,7 +54,9 @@ function App() {
         <Switch>
           <Route exact path = "/lp" render = {(rp) => gState.token ? <AuthLP /> : <Home/>}/>
 
-          <Route path = "/register" render = {(rp) => <SignupLogin {...rp} />}/>
+          <Route path = "/signup" render = {(rp) => <Signup {...rp} />}/>
+
+          <Route path = "/login" render = {(rp) => <Login {...rp} />}/>
           
           <Route path = "/movcomp" render = {(rp) => <MovieComponent {...rp} />}/>
 
