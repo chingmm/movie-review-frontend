@@ -325,6 +325,6 @@ const AuthLP = (props) => {
         
         
     );
-    }
+    } 
 
 export default AuthLP 
