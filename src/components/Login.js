@@ -2,7 +2,6 @@ import React from "react"
 import {GlobalCtx} from "../App"
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import Col from 'react-bootstrap/Col'
 const Login = (props) => {
 
     const {gState, setGState} = React.useContext(GlobalCtx)
@@ -42,14 +41,8 @@ const Login = (props) => {
         
     }
     return ( 
-    <>
-        <h1>
-            Welcome to Zen Movie Reviews
-        </h1>
-        <p> Let's get you started!</p>
-            
-            <div className="register-container"> 
-            <Col md={{ span:6, offset: 3}}>   
+    <div>
+            <div className="register-container">    
             <Form className="register-form" onSubmit = {handleSubmit} >
             
                 <h2 className="regform-signup"> Login</h2>
@@ -73,10 +66,9 @@ const Login = (props) => {
                 Login
                 </Button>
             </Form>
-            </Col>
 
         </div>
-        </>
+        </div>
     )}
 
 export default Login 

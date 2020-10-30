@@ -4,11 +4,18 @@ import Header from "./components/Header"
 import Signup from "./pages/signup"
 import Login from "./pages/login"
 import Home from "./pages/LandingPage"
-import Dashboard from "./pages/AuthLP"
+import AuthLP from "./pages/AuthLP"
+import MovieComponent from "./pages/movieComponent"
+import UserReview from "./pages/userReview"
+import AuthMC from './pages/AuthMC'
+import Title from './components/Title'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import Container from "react-bootstrap/Container"
 import {Route, Link, Switch} from "react-router-dom"
 import './App.css';
+import SignupLogin from './pages/signup';
+
 
 
 
@@ -35,7 +42,9 @@ function App() {
     <Container fluid className="header-container">
       <row >
       <Link to = "/"> 
-      <h1 className="app-title">ZEN MOVIE <span>REVIEWS </span></h1> </Link>
+      <Title/>
+      {/* <h1 className="app-title">ZEN MOVIE <span>REVIEWS </span></h1>  */}
+      </Link>
       </row>
       </Container>
 
@@ -43,15 +52,17 @@ function App() {
 
       <main>
         <Switch>
-          <Route exact path = "/" render = {(rp) => gState.token ? <Dashboard /> : <Home/>}/>
+          <Route exact path = "/lp" render = {(rp) => gState.token ? <AuthLP /> : <Home/>}/>
 
           <Route path = "/signup" render = {(rp) => <Signup {...rp} />}/>
 
-          <Route path = "/login" render = {(rp) =>
-          <Login {...rp} />}
-          />
+          <Route path = "/login" render = {(rp) => <Login {...rp} />}/>
           
-          <Route path = "/dashboard" render = {(rp) => <h1>dashboard</h1>}/>
+          <Route path = "/movcomp" render = {(rp) => <MovieComponent {...rp} />}/>
+
+          <Route path = "/userreviews" render = {(rp) => <UserReview {...rp} />}/>
+
+          <Route path = "/userreviews/:id" render = {(rp) => <AuthMC {...rp} />}/>
 
         </Switch>
       </main>
