@@ -33,9 +33,10 @@ const Home = (props) => {
 
 <Container className="images-carousel" >
 <h3 className="authlp-h3"> Top Movies </h3>
-<p className="authlp-h3-p"> Login to rate and create a watchlist of personalised Top picks recommendations</p>
-<a href="/login" className="authlp-login">Login</a>
+<p className="authlp-h3-p"> <a href="/login" className="authlp-login">Login</a> to rate and create a watchlist of personalised Top picks recommendations</p>
+
   <Row >
+    
 {/* <div > */}
     <Col className = "col-md-4-col-6" xs={6} md={4}>
       <Image src="https://images-na.ssl-images-amazon.com/images/I/81lJ%2BkZrUqL.png" thumbnail />

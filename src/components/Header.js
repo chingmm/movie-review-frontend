@@ -9,7 +9,11 @@ import Button from "react-bootstrap/Button"
 import MovieSearch from "../pages/MovieSearch"
 
 
+
+
 const Header = (props) => {
+
+    const {Movie} = props
 
     const {gState, setGState} = React.useContext(GlobalCtx);
 
@@ -19,22 +23,29 @@ const Header = (props) => {
     }}   >Logout</h2></Nav.Link>)
 
     return ( 
-   
-    
-        
-        
-        <Navbar bg="dark" variant="dark">
+    // <nav>
+    //     <Link to="/register"><h2>Signup/Login</h2></Link>
+    //     <Link to="/login"><h2> Login</h2></Link>
+    //     {gState.token ? logout : null}
+
+    // </nav>
+
+    // )}
+
+    <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="/lp">Home</Navbar.Brand>
         <Nav className="mr-auto">
             <Nav.Link href="/movcomp">Movie Reviews</Nav.Link>
             <Nav.Link href="/signup">Signup</Nav.Link>
             <Nav.Link href="/login">Login</Nav.Link>
-        {gState.token ? logout : null}
+            <Nav.Link href="/logout">Logout</Nav.Link>
+            {gState.token ? logout : null}
         </Nav>
-        {/* <Form inline> */}
-        <MovieSearch />
-        {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-        <Button variant="outline-info">Search</Button> */}
+      
+        <Form inline>
+        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+        <Button variant="outline-info">Search</Button>
+        </Form>
   </Navbar>
 
     

@@ -18,6 +18,7 @@ import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import  Modal  from "react-bootstrap/Modal"
 import ModalDialog from "react-bootstrap/esm/ModalDialog"
 import UpdateModal from "../components/update_modal"
+import Movies from "../components/Movie"
 
 
 
@@ -159,8 +160,8 @@ const AuthLP = (props) => {
                     <h3 className="authlp-h3"> List of Movies to Review </h3>
                     <Row >
                     {/* <div > */}
-                        <Col className = "col-md-4-col-6" xs={6} md={4}>
-                        <Image src="https://images-na.ssl-images-amazon.com/images/I/81lJ%2BkZrUqL.png" thumbnail />
+                        {/* <Col className = "col-md-4-col-6" xs={6} md={4}>
+                        <Image src= {`https://image.tmdb.org/t/p/${posterSize}${movie.poster_path}`} thumbnail />
                         <div className="carousel-bottom">
                             <h4>movie name</h4>
                             <button className="watch">Watch Trailer</button>
@@ -168,7 +169,7 @@ const AuthLP = (props) => {
                             <button className="review">Review this movie </button>
 
                         </div>
-                        </Col>
+                        </Col> */}
                        
 
                         <Col className = "col-md-4-col-6" xs={6} md={4}>
