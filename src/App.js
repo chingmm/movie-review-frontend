@@ -19,7 +19,7 @@ import {Route, Link, Switch} from "react-router-dom"
 import './App.css';
 import Movie_component from './pages/movie_component';
 import User_reviews from './pages/user_reviews';
-import AuthMC from './pages/AuthMC';
+// import AuthMC from './pages/AuthMC';
 import starRating from "./components/starRating"
 
 export const GlobalCtx = React.createContext(null)

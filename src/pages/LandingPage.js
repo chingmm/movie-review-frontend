@@ -8,11 +8,11 @@ import FormControl from "react-bootstrap/FormControl"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import Header from "../components/Header"
+import TextField from '@material-ui/core/TextField';
+import HoverRating from "../components/starRating"
 const Home = (props) => {
 
   // <Header />
-  import TextField from '@material-ui/core/TextField';
-  import HoverRating from "../components/starRating"
         return ( 
       <div className="images-carousel container">
             <Header />
