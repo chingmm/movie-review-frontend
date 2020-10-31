@@ -6,23 +6,8 @@ import moment from 'moment'
 
 const MovieDetails = (props) => {
 
-    // const [selectedMovie, setSelectedMovie] = useState(null)
     const selectedMovie = props.movie
     const moviePosterSize = "w400"
-
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const response = await getMovie(props.match.params.id)
-    //             setSelectedMovie(response);
-    //         } catch (err) {
-    //             console.log(err);
-    //         }
-    //     }
-    //     fetchData()
-    // }, [])
-
-
 
     const renderData = () => {
 
@@ -40,9 +25,7 @@ const MovieDetails = (props) => {
                         <div>
                             <div>
                                 <h5>Realease Date: {moment(release_date).format('MMMM DD, YYYY')}</h5>
-
                                 <div>{overview}</div>
-
                                 <span>Genres: </span>{genres.map((genre, index) => (
                                     <span>{genre.name} </span>
                                 ))}

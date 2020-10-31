@@ -24,14 +24,6 @@ const Header = (props) => {
     }}   >Logout</Nav.Link>)
 
     return ( 
-    // <nav>
-    //     <Link to="/register"><h2>Signup/Login</h2></Link>
-    //     <Link to="/login"><h2> Login</h2></Link>
-    //     {gState.token ? logout : null}
-
-    // </nav>
-
-    // )}
 
     <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="/movcomp">Home</Navbar.Brand>
@@ -39,7 +31,6 @@ const Header = (props) => {
             <Nav.Link href="/lp">My Movie Reviews</Nav.Link>
             <Nav.Link href="/signup" className="signinlogin">Signup</Nav.Link>
             <Nav.Link href="/login" className="signinlogin">Login</Nav.Link>
-            {/* <Nav.Link href="/logout">Logout</Nav.Link> */}
             {gState.token ? logout : null}
         </Nav>
   </Navbar>

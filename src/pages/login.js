@@ -48,11 +48,9 @@ const Login = (props) => {
             Welcome to Zen Movie Reviews
         </h1>
         <p> Let's get you started!</p>
-            
             <div className="register-container"> 
             <Col md={{ span:6, offset: 3}}>   
             <Form className="register-form" onSubmit = {handleSubmit} >
-            
                 <h2 className="regform-signup"> Login</h2>
                 <Form.Group controlId="formLogin">
                 <Form.Control className="input" type = "text" 
@@ -60,7 +58,6 @@ const Login = (props) => {
                 name = "username" 
                 value = {form.username} onChange={handleChange}/>
             </Form.Group>
-
             <Form.Group             controlId="formBasicPassword">
                 <Form.Control 
                 type = "password"
@@ -68,14 +65,12 @@ const Login = (props) => {
                 name = "password" 
                 value = {form.password} onChange={handleChange}/>
             </Form.Group>
-
                 <Button className = "login-btn" 
                 variant= "primary" type="submit"> 
                 Login
                 </Button>
             </Form>
             </Col>
-
         </div>
         </>
     )}

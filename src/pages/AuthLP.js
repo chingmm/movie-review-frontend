@@ -72,8 +72,6 @@ const AuthLP = (props) => {
             const poster = posterinput.current.value
             const userreview = userreviewinput.current.value 
 
-            // console.log(movie)
-
             fetch(url + "/movie/", {
                 method: "post",
                 headers: {
@@ -148,15 +146,6 @@ const AuthLP = (props) => {
     return (
         <div>
 
-
-
-{/*--------------------- THIS IS THE "MY REVIEW LIST" SECTION-------------- */}
-
-                  
-
-
-{/* -------------------------ADD SECTION----------------------------- */}
-
  <h3 className="authlp-h3"> My Reviewed Movies List </h3> 
 <div className="input-output"> 
     
@@ -185,9 +174,6 @@ const AuthLP = (props) => {
             <button onClick = {handleClick} className="add">ADD!</button>
             </div>
             
-
-
-{/* ---------------------start of output div--------------------------------- */}
     <div className="output">
             <ul>
                {movies ? movies.map((movie)=> (
@@ -209,27 +195,10 @@ const AuthLP = (props) => {
                    <li key = {movie._id} >{movie.userreview}</li>
                    </div>
 
-
-                   {/* <li key = {movie._id} >{movie.rated}</li> */}
                     <div> 
                    <button className="delete-btn" onClick={()=> handleDelete(movie._id)}>Delete</button>
                    <UpdateModal/>
                    </div>
-
-                   {/* <button onClick={()=>{
-                   setUpdateID(movie._id)
-                   titleupdate.current.value = movie.title
-                   yearreleasedupdate.current.value = movie.yearreleased
-                   ratedupdate.current.value = movie.rated
-                   genreupdate.current.value = movie.genre
-                   directorupdate.current.value = movie.director
-                   overallratingupdate.current.value = movie.overallrating
-                   posterupdate.current.value = movie.poster
-                   userreviewupdate.current.value = movie.userreview           
-                }
-                 
-                   }>Edit</button> */}
-
                    
                    </div>)) : null} 
             </ul>
@@ -237,12 +206,7 @@ const AuthLP = (props) => {
 
     
      </div>
-{/* -----------------------end of output--------------------------------- */}
 
-            
-
-
-{/* -------------------------UPDATE SECTION----------------------------- */}
     <div className="hide">
              <form>
             <input type = "text" placeholder = "title" name = "title" ref = {titleupdate}/>

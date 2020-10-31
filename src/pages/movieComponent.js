@@ -16,7 +16,6 @@ import Card from "react-bootstrap/Card"
 
 
 const MovieComponent = (props) => {
-    // const {movie} = props.pageType.Movies
     const selectedMovie = props.movie
     const moviePosterSize = 'w400'
     console.log(props)
@@ -31,7 +30,6 @@ const MovieComponent = (props) => {
             const { vote_average, vote_count, popularity, overview, tagline, poster_path, genre_ids:genres, title, release_date } = selectedMovie
   
         return (
-      
         <>
         <Row>
             <Col>
@@ -51,9 +49,6 @@ const MovieComponent = (props) => {
                         <b>Title</b><br/>{title}
                     </ListGroup.Item>
                     <ListGroup.Item><b>Year Released</b><br/>{selectedMovie.release_date}</ListGroup.Item>
-                    {/* <ListGroup.Item><b>Popularity</b><br/>{selectedMovie.popularity}</ListGroup.Item> */}
-                    {/* <ListGroup.Item><b>Genre</b><br/>{genre_ids:genres}</ListGroup.Item> */}
-                    
         <ListGroup.Item><b>Voter Average</b><br/>{vote_average}</ListGroup.Item>
                     <ListGroup.Item>
                         <Accordion defaultActiveKey="0">
@@ -67,17 +62,7 @@ const MovieComponent = (props) => {
                             </Card>
                         </Accordion>
                     </ListGroup.Item>
-                    {/* <ListGroup.Item><b>User Review</b><br/>Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.</ListGroup.Item> */}
-                </ListGroup>    
-                {/* <Form>
-                <Form.Group controlId="exampleForm.ControlTextarea1">
-                    <Form.Label>Comment/Review</Form.Label>
-                    <Form.Control as="textarea" rows={3} />
-                </Form.Group>  
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>  
-                </Form>       */}
+                </ListGroup>
             </Col>
         </Row>
         </>

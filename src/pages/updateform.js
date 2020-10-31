@@ -9,7 +9,6 @@ import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import {GlobalCtx} from "../App"
 import { makeStyles } from '@material-ui/core/styles';
-// import { classes } from '@material-ui/core/styles';
 import BasicTextFields from "../components/textfield"
 import TextField from '@material-ui/core/TextField';
 import HoverRating from "../components/starRating"
@@ -42,15 +41,6 @@ const Updateform = (props) => {
     React.useEffect(()=> {
         getMovies()}, [])
 
-        // const titleinput = React.useRef(null)
-        // const yearreleasedinput = React.useRef(null)
-        // const ratedinput = React.useRef(null)
-        // const genreinput = React.useRef(null)
-        // const directorinput = React.useRef(null)
-        // const overallratinginput = React.useRef(null)
-        // const posterinput = React.useRef(null)
-        // const userreviewinput = React.useRef(null)
-
         const titleupdate = React.useRef(null)
         const yearreleasedupdate = React.useRef(null)
         const ratedupdate = React.useRef(null)
@@ -59,43 +49,6 @@ const Updateform = (props) => {
         const overallratingupdate = React.useRef(null)
         const posterupdate = React.useRef(null)
         const userreviewupdate = React.useRef(null)
-
-        // const handleClick = (event) => {
-        //     const title = titleinput.current.value
-        //     const yearreleased = yearreleasedinput.current.value
-        //     const rated = ratedinput.current.value
-        //     const genre = genreinput.current.value
-        //     const director = directorinput.current.value
-        //     const overallrating = overallratinginput.current.value
-        //     const poster = posterinput.current.value
-        //     const userreview = userreviewinput.current.value 
-
-        //     // console.log(movie)
-
-        //     fetch(url + "/movie/", {
-        //         method: "post",
-        //         headers: {
-        //             "Content-Type": "application/json", 
-        //             Authorization: `bearer ` + token
-        //         },
-        //         body: JSON.stringify({title, yearreleased, rated, genre, director, overallrating, poster, userreview})
-
-        //     })
-        //     .then(response =>response.json())
-        //     .then(data=>{
-        //         titleinput.current.value = ""
-        //         yearreleasedinput.current.value = ""
-        //         ratedinput.current.value = ""
-        //         genreinput.current.value = ""
-        //         directorinput.current.value = ""
-        //         overallratinginput.current.value = ""
-        //         posterinput.current.value = ""
-        //         userreviewinput.current.value = ""
-
-        //         getMovies()
-        //     })
-
-        // }
 
         const handleUpdate =  (id) => {
             const title = titleupdate.current.value
@@ -106,7 +59,6 @@ const Updateform = (props) => {
             const overallrating = overallratingupdate.current.value
             const poster = posterupdate.current.value
             const userreview = userreviewupdate.current.value
-
         fetch(url + "/movie/" + updateID, {
             method: "put",
             headers: {
@@ -128,22 +80,12 @@ const Updateform = (props) => {
             setUpdateID(null)
             getMovies()
         })
-
         }
 
     
     return (
         <div className="modal-pop">
-
-{/* 
- <h3 className="authlp-h3"> My Reviewed Movies List </h3>  */}
 <div className="input-output-modal"> 
-    
-       
-
-
-{/* ---------------------start of output div--------------------------------- */}
-
 <div className="output">
             <ul>
                {movies ? movies.map((movie)=> (
@@ -151,7 +93,6 @@ const Updateform = (props) => {
                     <div className="display-img-modal">
                    <li key = {movie._id} ><img src= {`${movie.poster}`} /> </li>
                    </div>
-
                    <div className="display-info">
                    <li key = {movie._id} >{movie.title}</li>
                    <li key = {movie._id} >{movie.yearreleased}</li>
@@ -163,7 +104,6 @@ const Updateform = (props) => {
                    <div className="display-review">
                    <li key = {movie._id} >{movie.userreview}</li>
                    </div>
-
     <button onClick={()=>{
         setUpdateID(movie._id)
             titleupdate.current.value = movie.title
@@ -175,26 +115,14 @@ const Updateform = (props) => {
             posterupdate.current.value = movie.poster
             userreviewupdate.current.value = movie.userreview           
                 }
-                 
                    } className="edit-btn">Edit</button>
                     <br></br>
                    <hr></hr>
                    </div>)) : null} 
-
-                  
-            
             </ul>
      </div>
-
-    
      </div>
-{/* -----------------------end of output--------------------------------- */}
-
-
-{/* -------------------------UPDATE SECTION----------------------------- */}
     <div className="form">
-
-
             <form>
             <input type = "text" placeholder = "title" name = "title" ref = {titleupdate}/>
             <input type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedupdate}/>
@@ -204,16 +132,10 @@ const Updateform = (props) => {
             <input type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratingupdate}/>
            <input type = "text" placeholder = "poster" name = "poster" ref = {posterupdate}/>
             <input type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewupdate}/>
-
             </form>
-
             </div>
             <button onClick = {handleUpdate}>Save Changes</button>
-    
-        </div>
-       
-        
-         
+        </div> 
     );
     }
 

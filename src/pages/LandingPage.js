@@ -21,16 +21,10 @@ const Home = (props) => {
     return ( 
   <>
  <div classname="blank"/>
-
 <div className="images-carousel"> 
-
-
   <h3 className="authlp-h3"> Top Movies </h3>
   <p className="authlp-h3-p"> <a href="/login" className="authlp-login"> Login </a> to rate and create a watchlist of personalised Top picks recommendations</p>
-  
-  {/* <Row className="row-lp"> */}
 <div className="row">
-
     <Col className = "col-md-4-col-6" xs={6} md={4}>
       <Image src="https://cdn2-www.comingsoon.net/assets/uploads/gallery/the-war-with-grandpa/wwg_poster.jpg" thumbnail />
       <div>
@@ -40,7 +34,6 @@ const Home = (props) => {
             <button className="review">Login to review movie </button>
             </div>
     </Col>
-
     <Col className = "col-md-4-col-6" xs={6} md={4}>
       <Image src="https://images-na.ssl-images-amazon.com/images/I/81lJ%2BkZrUqL.png" thumbnail />
       <div>
@@ -50,7 +43,6 @@ const Home = (props) => {
             <button className="review">Login to review movie </button>
             </div>
     </Col>
-
     <Col className = "col-md-4-col-6" xs={6} md={4}>
       <Image src="https://img.promipool.com/www-promipool-de/image/upload/c_crop,h_2963,w_1671,x_174,y_0/c_fill,h_1600,w_900/q_auto:eco/f_jpg/parasite_bong_joon_ho_movie_poster_200120_gb3jsmdsxk" thumbnail />
       <div>
@@ -88,15 +80,10 @@ const Home = (props) => {
         </div>
     </Col>
 </div>
-  {/* </Row> */}
-{/* </Container> */}
 </div>
 <br>
 </br>
-
-
         </>
-
     )
 }
 

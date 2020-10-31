@@ -18,7 +18,6 @@ const MovieDisplay = (props) => {
                     handleChange={props.handleChange}
                 />
             </Route>
-
             <Route exact path ="/movie/details/:id" component={match => 
                         <MovieDetails 
                         match={match} 

@@ -8,11 +8,7 @@ import MovieComponent from './movieComponent'
 
 const Movies = (props) => {
 
-    // console.log(props)
-
     const posterSize = 'w200'
-
-    // console.log(props)
 
        if (props.pageType.Movies) {
     return (

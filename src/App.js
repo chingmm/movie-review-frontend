@@ -74,13 +74,10 @@ function App() {
       <row >
       <Link to = "/"> 
       <Title/>
-      {/* <h1 className="app-title">ZEN MOVIE <span>REVIEWS </span></h1>  */}
       </Link>
       </row>
       </Container>
-
       <Header/>
-
       <main>
       <Route path = "/" render = {(rp) => <MovieSearch {...rp} 
             searchInput={searchInput}
@@ -91,7 +88,6 @@ function App() {
             getMovie={getMovie}
             setPageType={setPageType}
           />}/>
-
           <Route path = "/" render = {(rp) =>
             <MovieResults {...rp} 
             searchInput={searchInput}
@@ -104,26 +100,15 @@ function App() {
           />
         <Switch>
           <Route exact path = "/lp" render = {(rp) => gState.token ? <AuthLP /> : <Home/>}/>
-
           <Route path = "/signup" render = {(rp) => <Signup {...rp} />}/>
-
           <Route path = "/login" render = {(rp) => <Login {...rp} />}/>
-          
           <Route path = "/movcomp" render = {(rp) => <MovieComponent {...rp} />}/>
-
           <Route path = "/userreviews" render = {(rp) => <UserReview {...rp} />}/>
-
           <Route path = "/userreviews/:id" render = {(rp) => <AuthMC {...rp} />}/>
-
         </Switch>
-
-        
-          
       </main>
-
     </div>
     </GlobalCtx.Provider>
-
   );
 }
 
