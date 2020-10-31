@@ -82,22 +82,7 @@ function App() {
       <Header/>
 
       <main>
-        <Switch>
-          <Route exact path = "/lp" render = {(rp) => gState.token ? <AuthLP /> : <Home/>}/>
-
-          <Route path = "/signup" render = {(rp) => <Signup {...rp} />}/>
-
-          <Route path = "/login" render = {(rp) => <Login {...rp} />}/>
-          
-          <Route path = "/movcomp" render = {(rp) => <MovieComponent {...rp} />}/>
-
-          <Route path = "/userreviews" render = {(rp) => <UserReview {...rp} />}/>
-
-          <Route path = "/userreviews/:id" render = {(rp) => <AuthMC {...rp} />}/>
-
-        </Switch>
-
-        <Route path = "/" render = {(rp) => <MovieSearch {...rp} 
+      <Route path = "/" render = {(rp) => <MovieSearch {...rp} 
             searchInput={searchInput}
             handleClick={handleClick}
             handleChange={handleChange}
@@ -117,6 +102,22 @@ function App() {
             setPageType={setPageType}
             />}
           />
+        <Switch>
+          <Route exact path = "/lp" render = {(rp) => gState.token ? <AuthLP /> : <Home/>}/>
+
+          <Route path = "/signup" render = {(rp) => <Signup {...rp} />}/>
+
+          <Route path = "/login" render = {(rp) => <Login {...rp} />}/>
+          
+          <Route path = "/movcomp" render = {(rp) => <MovieComponent {...rp} />}/>
+
+          <Route path = "/userreviews" render = {(rp) => <UserReview {...rp} />}/>
+
+          <Route path = "/userreviews/:id" render = {(rp) => <AuthMC {...rp} />}/>
+
+        </Switch>
+
+        
           
       </main>
 
