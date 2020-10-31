@@ -1,5 +1,4 @@
 import React from "react"
-
 import {GlobalCtx} from "../App"
 
 const AuthMC = (props) => {

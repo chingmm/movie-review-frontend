@@ -74,9 +74,9 @@ const Signup = (props) => {
         <Col md={{ span:6, offset: 3}}>
             <Form className="register-form" onSubmit = {handleSubmit} >    
                 <h2 className="regform-signup"> Signup</h2>
-                <Form.Group controlId="formBasicEmail">
+                <Form.Group controlId="formSignup">
                 <Form.Control className="input" type = "text" 
-                    placeholder="Enter email"
+                    placeholder="Enter username"
                     name = "username" 
                     value = {form.username} onChange={handleChange}/>
                 </Form.Group>
@@ -89,7 +89,7 @@ const Signup = (props) => {
                     value = {form.password} onChange={handleChange}/>
                 </Form.Group>
 
-                <Button className = "login-btn" 
+                <Button className = "signup-btn" 
                     variant= "primary" type="submit"> 
                     Signup
                 </Button>
