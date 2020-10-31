@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form"
 import FormControl from "react-bootstrap/FormControl"
 import Button from "react-bootstrap/Button"
 import MovieSearch from "../pages/MovieSearch"
+// import {FiVideo} from 'react-icons/fi'
 
 
 
@@ -17,10 +18,10 @@ const Header = (props) => {
 
     const {gState, setGState} = React.useContext(GlobalCtx);
 
-    const logout = (<Nav.Link> <h2 onClick = {()=> {
+    const logout = (<Nav.Link onClick = {()=> {
         window.localStorage.removeItem("token")
         setGState({...gState, token: null})
-    }}   >Logout</h2></Nav.Link>)
+    }}   >Logout</Nav.Link>)
 
     return ( 
     // <nav>
@@ -38,7 +39,7 @@ const Header = (props) => {
             <Nav.Link href="/movcomp">Movie Reviews</Nav.Link>
             <Nav.Link href="/signup">Signup</Nav.Link>
             <Nav.Link href="/login">Login</Nav.Link>
-            <Nav.Link href="/logout">Logout</Nav.Link>
+            {/* <Nav.Link href="/logout">Logout</Nav.Link> */}
             {gState.token ? logout : null}
         </Nav>
       

@@ -79,7 +79,7 @@ function App() {
       </row>
       </Container>
 
-      {/* <Header/> */}
+      <Header/>
 
       <main>
         <Switch>

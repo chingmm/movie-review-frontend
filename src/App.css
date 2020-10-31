@@ -57,6 +57,9 @@ img {
   margin-top: 30px;
 }
 
+.list-group-item {
+  font-size: 30px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

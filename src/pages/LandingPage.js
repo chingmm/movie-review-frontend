@@ -15,7 +15,6 @@ const Home = (props) => {
   // <Header />
         return ( 
       <div className="images-carousel container">
-            <Header />
     {/* <InputGroup className="mb-3">
         <FormControl
       placeholder="Recipient's username"
