@@ -8,6 +8,7 @@ import FormControl from "react-bootstrap/FormControl"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import {GlobalCtx} from "../App"
+import HeaderLogout from "../components/HeaderLogout"
 import { makeStyles } from '@material-ui/core/styles';
 // import { classes } from '@material-ui/core/styles';
 import BasicTextFields from "../components/textfield"

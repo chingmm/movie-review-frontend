@@ -54,9 +54,9 @@ const Login = (props) => {
             <Form className="register-form" onSubmit = {handleSubmit} >
             
                 <h2 className="regform-signup"> Login</h2>
-                <Form.Group controlId="formBasicEmail">
+                <Form.Group controlId="formLogin">
                 <Form.Control className="input" type = "text" 
-                placeholder="Enter email"
+                placeholder="Enter username"
                 name = "username" 
                 value = {form.username} onChange={handleChange}/>
             </Form.Group>

@@ -7,6 +7,7 @@ import InputGroup from "react-bootstrap/InputGroup"
 import FormControl from "react-bootstrap/FormControl"
 import {Button, Card} from "react-bootstrap/"
 import Form from "react-bootstrap/Form"
+import Header from "../components/Header"
 import TextField from '@material-ui/core/TextField';
 import HoverRating from "../components/starRating"
 import MovieSearch from "../pages/MovieSearch"
