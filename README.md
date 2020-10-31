@@ -27,3 +27,12 @@ For models, we have 2 of them:
 1)   Movies.js which contains movie schema
 2)   User.js which contains user schema
 Server.js folder: contains the middle, router and listeners.
+
+#Components
+The Navbar and Title were made as components because they are used throughout the pages and doesn't need a route. 
+Signup, Login, Logout is in the Navbar - using onClick as the function to remove the jwt token, Logout appears and goes away based on user's status. 
+
+#Pages
+Login Page, Signup Page were made and routed to their proper links. Movie componenet starts with a search bar that is bringing in props from the movieSearch page. This page contains the code that will filter the third party API we used with matching titles. The results were displayed using Bootstrap and the props from MovieResults (returned API list were mapped out) and MovieDetails(provided the poster path and the if statement). 
+
+React-Bootstrap was used to style the pages and App.css.

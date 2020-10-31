@@ -62,8 +62,11 @@ img {
 }
 
 main {
-  /* background-color: black; */
-  /* margin-top: 20px; */
+  color: white;
+}
+
+.signinlogin {
+  justify-content: right;
 }
 
 @media (prefers-reduced-motion: no-preference) {
