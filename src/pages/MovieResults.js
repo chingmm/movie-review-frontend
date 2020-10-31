@@ -3,21 +3,25 @@ import moment from 'moment'
 import { Link } from 'react-router-dom'
 import Movie from '../components/Movie'
 import MovieSearch from './MovieSearch'
+import MovieComponent from './movieComponent'
 
 
 const Movies = (props) => {
 
-    console.log(props)
+    // console.log(props)
 
     const posterSize = 'w200'
 
-    console.log(props)
+    // console.log(props)
 
        if (props.pageType.Movies) {
     return (
         <div>
             {props.pageType.Movies.map((movie, index) => (
+                <>
+                <MovieComponent movie={movie} />
                 <Movie movie={movie} />
+                </>
             ))}
         </div>
     )

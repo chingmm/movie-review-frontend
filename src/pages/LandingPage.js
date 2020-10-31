@@ -7,14 +7,14 @@ import InputGroup from "react-bootstrap/InputGroup"
 import FormControl from "react-bootstrap/FormControl"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
+import Header from "../components/Header"
 import TextField from '@material-ui/core/TextField';
 import HoverRating from "../components/starRating"
-
 const Home = (props) => {
 
-    return ( 
-        <div className="images-carousel container">
-            
+  // <Header />
+        return ( 
+      <div className="images-carousel container">
     {/* <InputGroup className="mb-3">
         <FormControl
       placeholder="Recipient's username"
