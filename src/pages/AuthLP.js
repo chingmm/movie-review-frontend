@@ -20,7 +20,7 @@ import ModalDialog from "react-bootstrap/esm/ModalDialog"
 import UpdateModal from "../components/update_modal"
 import Movies from "../components/Movie"
 
-
+ 
 
 const AuthLP = (props) => {
 
@@ -163,26 +163,26 @@ const AuthLP = (props) => {
        <div  className="add-movie">
          
             <form > 
-                <InputGroup className="mb-3">
-                <input type = "text" placeholder = "title" name = "title" ref = {titleinput}/> </InputGroup>
-                <InputGroup className="mb-3">
-                <input type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedinput}/></InputGroup>
-                <InputGroup className="mb-3">
-                 <input type = "text" placeholder = "rated" name = "rated" ref = {ratedinput}/></InputGroup>
-                 <InputGroup className="mb-3">
-                <input type = "text" placeholder = "genre" name = "genre" ref = {genreinput}/></InputGroup>
-                <InputGroup className="mb-3">
-                <input type = "text" placeholder = "director" name = "director" ref = {directorinput}/></InputGroup>
-                <InputGroup className="mb-3">
-                <input type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratinginput}/>
-                <InputGroup className="mb-3"></InputGroup>
-                <input type = "url" placeholder = "poster" name = "poster" ref = {posterinput}/></InputGroup>
+                
+                <input type = "text" placeholder = "Movie Title" name = "title" ref = {titleinput}/> 
+                
+                <input type = "text" placeholder = "Year Released" name = "yearreleased" ref = {yearreleasedinput}/>
+              
+                 <input type = "text" placeholder = "Rated" name = "rated" ref = {ratedinput}/>
+                
+                <input type = "text" placeholder = "Genre" name = "genre" ref = {genreinput}/>
+               
+                <input type = "text" placeholder = "Director Name" name = "director" ref = {directorinput}/>
+                
+                <input type = "text" placeholder = "Your rating out of 10" name = "overallrating" ref = {overallratinginput}/>
+               
+                <input type = "url" placeholder = "http://..." name = "poster" ref = {posterinput}/>
               
                 <div  className="add-movie">
-                <TextareaAutosize  id="textarea" type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewinput}/>
+                <TextareaAutosize  id="textarea" type = "text" placeholder = "Make a note of what you thought of the movie." name = "userreview" ref = {userreviewinput}/>
                 </div>  
             </form>
-            <button onClick = {handleClick}>ADD!</button>
+            <button onClick = {handleClick} className="add">ADD!</button>
             </div>
             
 
@@ -212,7 +212,7 @@ const AuthLP = (props) => {
 
                    {/* <li key = {movie._id} >{movie.rated}</li> */}
                     <div> 
-                   <button onClick={()=> handleDelete(movie._id)}>Delete</button>
+                   <button className="delete-btn" onClick={()=> handleDelete(movie._id)}>Delete</button>
                    <UpdateModal/>
                    </div>
 
@@ -243,23 +243,21 @@ const AuthLP = (props) => {
 
 
 {/* -------------------------UPDATE SECTION----------------------------- */}
-    <div>
-
-
-            {/* <form>
+    <div className="hide">
+             <form>
             <input type = "text" placeholder = "title" name = "title" ref = {titleupdate}/>
             <input type = "text" placeholder = "yearreleased" name = "yearreleased" ref = {yearreleasedupdate}/>
             <input type = "text" placeholder = "rated" name = "rated" ref = {ratedupdate}/>
             <input type = "text" placeholder = "genre" name = "genre" ref = {genreupdate}/>
             <input type = "text" placeholder = "director" name = "director" ref = {directorupdate}/>
             <input type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratingupdate}/>
-           <input type = "text" placeholder = "poster" name = "poster" ref = {posterupdate}/>
+           <input type = "url" placeholder = "poster" name = "poster" ref = {posterupdate} />
             <input type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewupdate}/>
 
-            </form> */}
+            </form> 
 
             </div>
-            {/* <button onClick = {handleUpdate}> Save Changes </button> */}
+            <button onClick = {handleUpdate} className="hide"> Save Changes </button>
     
         </div>
        

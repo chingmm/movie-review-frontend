@@ -135,32 +135,34 @@ const Updateform = (props) => {
     return (
         <div className="modal-pop">
 
-
- <h3 className="authlp-h3"> My Reviewed Movies List </h3> 
-<div className="input-output"> 
+{/* 
+ <h3 className="authlp-h3"> My Reviewed Movies List </h3>  */}
+<div className="input-output-modal"> 
     
        
 
 
 {/* ---------------------start of output div--------------------------------- */}
 
-    <div className="output">
+<div className="output">
             <ul>
                {movies ? movies.map((movie)=> (
-               <div className = "outputtxt">
+               <div className = "outputtxt-modal">
+                    <div className="display-img-modal">
+                   <li key = {movie._id} ><img src= {`${movie.poster}`} /> </li>
+                   </div>
+
+                   <div className="display-info">
                    <li key = {movie._id} >{movie.title}</li>
                    <li key = {movie._id} >{movie.yearreleased}</li>
                    <li key = {movie._id} >{movie.rated}</li>
                    <li key = {movie._id} >{movie.genre}</li>
                    <li key = {movie._id} >{movie.director}</li>
                    <li key = {movie._id} >{movie.overallrating}</li>
-                   <li key = {movie._id} ><img src= {`${movie.poster}`} /> </li>
+                   </div>
+                   <div className="display-review">
                    <li key = {movie._id} >{movie.userreview}</li>
-
-
-                   {/* <li key = {movie._id} >{movie.rated}</li> */}
-
-                   {/* <button onClick={()=> handleDelete(movie._id)}>Delete</button> */}
+                   </div>
 
     <button onClick={()=>{
         setUpdateID(movie._id)
@@ -174,9 +176,12 @@ const Updateform = (props) => {
             userreviewupdate.current.value = movie.userreview           
                 }
                  
-                   }>Edit</button>
-                   
+                   } className="edit-btn">Edit</button>
+                    <br></br>
+                   <hr></hr>
                    </div>)) : null} 
+
+                  
             
             </ul>
      </div>
@@ -187,7 +192,7 @@ const Updateform = (props) => {
 
 
 {/* -------------------------UPDATE SECTION----------------------------- */}
-    <div>
+    <div className="form">
 
 
             <form>
@@ -208,7 +213,7 @@ const Updateform = (props) => {
         </div>
        
         
-        
+         
     );
     }
 

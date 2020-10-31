@@ -128,11 +128,11 @@ function UpdateModal() {
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>
-                <h1>UPDATE MOVIE </h1>
+                <h1>UPDATE MY MOVIE REVIEW </h1>
                 </Modal.Title>
           </Modal.Header>
 
-
+ 
           <Modal.Body>
                 <Updateform />
         </Modal.Body>

@@ -34,7 +34,7 @@ const Home = (props) => {
     <Col className = "col-md-4-col-6" xs={6} md={4}>
       <Image src="https://cdn2-www.comingsoon.net/assets/uploads/gallery/the-war-with-grandpa/wwg_poster.jpg" thumbnail />
       <div>
-          <h4>movie name</h4>
+          <h5 className="mov-name">The War with Grandpa</h5>
             <button className="watch">Watch Trailer</button>
             <HoverRating />
             <button className="review">Login to review movie </button>
@@ -44,7 +44,7 @@ const Home = (props) => {
     <Col className = "col-md-4-col-6" xs={6} md={4}>
       <Image src="https://images-na.ssl-images-amazon.com/images/I/81lJ%2BkZrUqL.png" thumbnail />
       <div>
-          <h4>movie name</h4>
+      <h5 className="mov-name">Alien</h5>
             <button className="watch">Watch Trailer</button>
             <HoverRating />
             <button className="review">Login to review movie </button>
@@ -54,7 +54,7 @@ const Home = (props) => {
     <Col className = "col-md-4-col-6" xs={6} md={4}>
       <Image src="https://img.promipool.com/www-promipool-de/image/upload/c_crop,h_2963,w_1671,x_174,y_0/c_fill,h_1600,w_900/q_auto:eco/f_jpg/parasite_bong_joon_ho_movie_poster_200120_gb3jsmdsxk" thumbnail />
       <div>
-          <h4>movie name</h4>
+      <h5 className="mov-name">Parasite</h5>
             <button className="watch">Watch Trailer</button>
             <HoverRating />
             <button className="review">Login to review movie </button>
@@ -63,7 +63,7 @@ const Home = (props) => {
     <Col className = "col-md-4-col-6" xs={6} md={4}>
       <Image src="https://nowplayingpodcast.com/images/posters/Godfather3.jpg" thumbnail />
       <div>
-          <h4>movie name</h4>
+      <h5 className="mov-name">The Godfather Part III</h5>
             <button className="watch">Watch Trailer</button>
             <HoverRating />
             <button className="review">Login to review movie </button>
@@ -72,7 +72,7 @@ const Home = (props) => {
     <Col className = "col-md-4-col-6" xs={6} md={4}>
       <Image src="https://upload.wikimedia.org/wikipedia/en/e/e6/Enola_Holmes_poster.jpeg" thumbnail />
       <div>
-          <h4>movie name</h4>
+      <h5 className="mov-name">Enola Holmes</h5>
             <button className="watch">Watch Trailer</button>
             <HoverRating />
             <button className="review">Login to review movie </button>
@@ -81,7 +81,7 @@ const Home = (props) => {
     <Col className = "col-md-4-col-6" xs={6} md={4}>
       <Image src="https://i.pinimg.com/originals/92/c8/e0/92c8e00b34fcfdeaf605a0647c21adb3.jpg" thumbnail />
       <div>
-          <h4>movie name</h4>
+      <h5 className="mov-name">Avengers</h5>
             <button className="watch">Watch Trailer</button>
             <HoverRating />
             <button className="review">Login to review movie </button>
