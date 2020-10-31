@@ -5,38 +5,42 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import InputGroup from "react-bootstrap/InputGroup"
 import FormControl from "react-bootstrap/FormControl"
-import Button from "react-bootstrap/Button"
+import {Button, Card} from "react-bootstrap/"
 import Form from "react-bootstrap/Form"
 import Header from "../components/Header"
 import TextField from '@material-ui/core/TextField';
 import HoverRating from "../components/starRating"
+import MovieSearch from "../pages/MovieSearch"
+
+
+
+
+
 const Home = (props) => {
 
-  // <Header />
-        return ( 
-      <div className="images-carousel container">
-    {/* <InputGroup className="mb-3">
-        <FormControl
-      placeholder="Recipient's username"
-    />
-        <InputGroup.Append>
-      <Button variant="outline-secondary">Button</Button>
-        </InputGroup.Append>
-    </InputGroup> */}
+    return ( 
+  <>
+ <div classname="blank"/>
 
-<Form>
-<input type="text" placeholder="Look up a movie"></input>
-<input type="submit" value="Find"></input>
-</Form>
+<div className="images-carousel"> 
 
 
-<Container className="images-carousel" >
-<h3 className="authlp-h3"> Top Movies </h3>
-<p className="authlp-h3-p"> <a href="/login" className="authlp-login">Login</a> to rate and create a watchlist of personalised Top picks recommendations</p>
+  <h3 className="authlp-h3"> Top Movies </h3>
+  <p className="authlp-h3-p"> <a href="/login" className="authlp-login"> Login </a> to rate and create a watchlist of personalised Top picks recommendations</p>
+  
+  {/* <Row className="row-lp"> */}
+<div className="row">
 
-  <Row >
-    
-{/* <div > */}
+    <Col className = "col-md-4-col-6" xs={6} md={4}>
+      <Image src="https://cdn2-www.comingsoon.net/assets/uploads/gallery/the-war-with-grandpa/wwg_poster.jpg" thumbnail />
+      <div>
+          <h4>movie name</h4>
+            <button className="watch">Watch Trailer</button>
+            <HoverRating />
+            <button className="review">Login to review movie </button>
+            </div>
+    </Col>
+
     <Col className = "col-md-4-col-6" xs={6} md={4}>
       <Image src="https://images-na.ssl-images-amazon.com/images/I/81lJ%2BkZrUqL.png" thumbnail />
       <div>
@@ -48,7 +52,7 @@ const Home = (props) => {
     </Col>
 
     <Col className = "col-md-4-col-6" xs={6} md={4}>
-      <Image src="https://www.reviewsphere.org/wp-content/uploads/2020/02/The-Gentlemen-2019.jpg" thumbnail />
+      <Image src="https://img.promipool.com/www-promipool-de/image/upload/c_crop,h_2963,w_1671,x_174,y_0/c_fill,h_1600,w_900/q_auto:eco/f_jpg/parasite_bong_joon_ho_movie_poster_200120_gb3jsmdsxk" thumbnail />
       <div>
           <h4>movie name</h4>
             <button className="watch">Watch Trailer</button>
@@ -83,15 +87,15 @@ const Home = (props) => {
             <button className="review">Login to review movie </button>
         </div>
     </Col>
-{/* </div> */}
-  </Row>
-</Container>
-
+</div>
+  {/* </Row> */}
+{/* </Container> */}
+</div>
 <br>
 </br>
 
 
-        </div>
+        </>
 
     )
 }

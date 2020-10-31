@@ -148,76 +148,7 @@ const AuthLP = (props) => {
     return (
         <div>
 
-            {/* MAKE PAGE LOOK LIKE THE ONE IN FIGMA */}
-{/* ----------------THIS IS THE "LIST OF MOVIES TO REVIEW SECTION"---------*/}
-                    <Form>
-                    <input type="text" placeholder="Look up a movie"></input>
-                    <input type="submit" value="Find"></input>
-                    </Form>
 
-                   
-                    <Container className="images-carousel" >
-                    <h3 className="authlp-h3"> List of Movies to Review </h3>
-                    <Row >
-                    {/* <div > */}
-                        {/* <Col className = "col-md-4-col-6" xs={6} md={4}>
-                        <Image src= {`https://image.tmdb.org/t/p/${posterSize}${movie.poster_path}`} thumbnail />
-                        <div className="carousel-bottom">
-                            <h4>movie name</h4>
-                            <button className="watch">Watch Trailer</button>
-                            <HoverRating />
-                            <button className="review">Review this movie </button>
-
-                        </div>
-                        </Col> */}
-                       
-
-                        <Col className = "col-md-4-col-6" xs={6} md={4}>
-                        <Image src="https://www.reviewsphere.org/wp-content/uploads/2020/02/The-Gentlemen-2019.jpg" thumbnail />
-                        <div>
-                            <h4>movie name</h4>
-                            <button className="watch">Watch Trailer</button>
-                            <HoverRating />
-                            <button className="review">Review this movie </button>
-                        </div>
-                        </Col>
-
-                        <Col className = "col-md-4-col-6" xs={6} md={4}>
-                        <Image src="https://nowplayingpodcast.com/images/posters/Godfather3.jpg" thumbnail />
-                        <div>
-                            <h4>movie name</h4>
-                            <button className="watch">Watch Trailer</button>
-                            <HoverRating />
-                            <button className="review">Review this movie </button>
-                        </div>
-                        </Col>
-
-
-                        <Col className = "col-md-4-col-6" xs={6} md={4}>
-                        <Image src="https://upload.wikimedia.org/wikipedia/en/e/e6/Enola_Holmes_poster.jpeg" thumbnail />
-                        <div>
-                            <h4>movie name</h4>
-                            <button className="watch">Watch Trailer</button>
-                            <HoverRating />
-                            <button className="review">Review this movie </button>
-                        </div>
-                        </Col>
-
-                        <Col className = "col-md-4-col-6" xs={6} md={4}>
-                        <Image src="https://i.pinimg.com/originals/92/c8/e0/92c8e00b34fcfdeaf605a0647c21adb3.jpg" thumbnail />
-                        <div>
-                            <h4>movie name</h4>
-                            <button className="watch">Watch Trailer</button>
-                            <HoverRating />
-                            <button className="review">Review this movie </button>
-                        </div>
-                        </Col>
-                    {/* </div> */}
-                    </Row>
-                    </Container>
-                    
-                    <br></br>
-                    <br></br>
 
 {/*--------------------- THIS IS THE "MY REVIEW LIST" SECTION-------------- */}
 
@@ -226,8 +157,6 @@ const AuthLP = (props) => {
 
 {/* -------------------------ADD SECTION----------------------------- */}
 
-            {/* CAN WE HAVE THIS SECTION BE DISPLAYED ON HERE UNDER A TITLE OF "ADD A MOVIE TO REVIEW LIST"? 
-                    what if we have the update display on this page as well, but only after clicking on a button? */}
  <h3 className="authlp-h3"> My Reviewed Movies List </h3> 
 <div className="input-output"> 
     
@@ -247,7 +176,7 @@ const AuthLP = (props) => {
                 <InputGroup className="mb-3">
                 <input type = "text" placeholder = "overallrating" name = "overallrating" ref = {overallratinginput}/>
                 <InputGroup className="mb-3"></InputGroup>
-                <input type = "text" placeholder = "poster" name = "poster" ref = {posterinput}/></InputGroup>
+                <input type = "url" placeholder = "poster" name = "poster" ref = {posterinput}/></InputGroup>
               
                 <div  className="add-movie">
                 <TextareaAutosize  id="textarea" type = "text" placeholder = "userreview" name = "userreview" ref = {userreviewinput}/>
@@ -263,20 +192,29 @@ const AuthLP = (props) => {
             <ul>
                {movies ? movies.map((movie)=> (
                <div className = "outputtxt">
+                    <div className="display-img">
+                   <li key = {movie._id} ><img src= {`${movie.poster}`} /> </li>
+                   </div>
+
+                   <div className="display-info">
                    <li key = {movie._id} >{movie.title}</li>
                    <li key = {movie._id} >{movie.yearreleased}</li>
                    <li key = {movie._id} >{movie.rated}</li>
                    <li key = {movie._id} >{movie.genre}</li>
                    <li key = {movie._id} >{movie.director}</li>
                    <li key = {movie._id} >{movie.overallrating}</li>
-                   <li key = {movie._id} ><img src= {`${movie.poster}`} /> </li>
+                   </div>
+
+                   <div className="display-review">
                    <li key = {movie._id} >{movie.userreview}</li>
+                   </div>
 
 
                    {/* <li key = {movie._id} >{movie.rated}</li> */}
-
+                    <div> 
                    <button onClick={()=> handleDelete(movie._id)}>Delete</button>
-                   
+                   <UpdateModal/>
+                   </div>
 
                    {/* <button onClick={()=>{
                    setUpdateID(movie._id)
@@ -291,7 +229,8 @@ const AuthLP = (props) => {
                 }
                  
                    }>Edit</button> */}
-                   <UpdateModal/>
+
+                   
                    </div>)) : null} 
             </ul>
      </div>
@@ -300,8 +239,8 @@ const AuthLP = (props) => {
      </div>
 {/* -----------------------end of output--------------------------------- */}
 
-                <h2>Update Info Here!</h2>
-\
+            
+
 
 {/* -------------------------UPDATE SECTION----------------------------- */}
     <div>
@@ -320,7 +259,7 @@ const AuthLP = (props) => {
             </form> */}
 
             </div>
-            <button onClick = {handleUpdate}> Save Changes </button>
+            {/* <button onClick = {handleUpdate}> Save Changes </button> */}
     
         </div>
        
