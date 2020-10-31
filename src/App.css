@@ -3,7 +3,7 @@
 
 .App {
   text-align: center;
-  /* background-color: black; */
+  background-color: black;
   height: 300px;
 }
 
@@ -133,79 +133,109 @@ img {
 
 
 
+
+
+
+/* LP - Top Movies*/
+/* .row-lp{
+  display: flex;
+  flex-direction: row;
+
+} */
+
+/*  MAIN */
+main{
+  background-color: black;
+  padding-top: 0px;
+}
+
+/* AuthLP - List of movies to review */
+
+.blank{
+  background-color:rgb(22, 21, 21);
+  height: 200px;;
+
+}
+.row {
+  display:flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  /* border: 1px solid black; */
+  /* background-color: cadetblue; */
+  /* margin:auto; */
+  justify-content: center;
+  padding-bottom: 20px;
+  /* min-width: 100%; */
+  width: 95%;
+  margin: auto;
+  padding-top: 20px;
+  background-color:rgb(22, 21, 21);
+
+}
+
+.images-carousel {
+
+  align-content: center;
+  /* margin-right: 40px; */
+  /* margin-inline-start: 10px; */
+  /* margin-inline-end: 100px; */
+  margin: auto;
+  justify-items: center;
+  background-color:black;
+
+}
+
+
+
 .authlp-h3{
   display: flex;
   position: relative;
   align-content: right;
-  text-indent: 65px;
-  padding: 0px;
-  margin: 0px;
+  text-indent: 30px;
+  padding-top: 15px;
+  /* margin: 0px; */
+  /* margin-top: 15px; */
+  font-size:49px;
+  color: white;
+  /* background-color:rgb(22, 21, 21); */
+
+}
+
+.authlp-login{
+  margin-right: 4px
 }
 
 .authlp-h3-p{
   display: flex;
   position: relative;
-  align-content: right;
-  text-indent: 65px;
+  /* align-content: right; */
+  text-indent: 40px;
   padding: 0px;
   margin-top: 2px;
   margin-bottom: 7px;
-}
-
-.authlp-login{
-  display: flex;
-  position: relative;
-  align-content: right;
-  text-indent: 65px;
-  padding: 0px;
-  margin-top: 4px;
-}
-
-.makeStyles-root-1{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: auto;
- 
-}
-
-/* AuthLP - List of movies to review */
-
-.row {
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  /* border: 1px solid black; */
-  /* background-color: cadetblue; */
-  width: 75%;
-  margin:auto;
-  justify-content: center;
-  padding-bottom: 20px;
-
-}
-
-.images-carousel{
-  align-content: center;
+  text-align: right;
+  color: white;
+  font-size: 18px;
 }
 
 .img-thumbnail {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: stretch;
-  max-width: 185px;
+  /* align-items: stretch; */
+  max-width: 280px;
   min-width: 50px;
-  height: 250px;
-  padding: 12px;
+  height: 280px;
+  padding: 7px;
   justify-content: center;
   align-items: center;
-  /* background-color: red */
+  background-color: red
 }
 
 .img-thumbnail img{
   align-self: center;
-  max-width:200px;
+  max-width:250px;
+  margin-top: 10px;
  
 }
 
@@ -215,7 +245,8 @@ img {
   background-color:lightgrey; 
   height: 480px;
   margin: 5px;
-  align-items: stretch;
+  max-width: 250px;
+  /* align-items: stretch; */
 }
 
 .carousel-bottom{
@@ -226,11 +257,36 @@ img {
   border-radius: 5px;
   font-size: 18px;
 }
+.makeStyles-root-1{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  margin-left:0px
+  /* margin: auto; */
+ 
+}
+
+.MuiRating-root{
+  width: 150px;
+  margin-left:0px
+}
+
+.MuiBox-root{
+  display: flex;
+  float: left;
+  margin-left:0px;
+  padding-left:0px;
+  
+}
 
 .review{
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 15px;
   background-color: lightskyblue;
+  margin-top: 5px;
 }
 
 
@@ -270,7 +326,39 @@ img {
 .output{
   /* width: 750px; */
   background-color: rgb(97, 23, 23);
+  max-height: 650px;
 }
+
+.outputtxt{
+  /* width: 850px; */
+  display: flex;
+  flex-direction: row;
+  height: 250px;
+  border: none;
+}
+
+ul{
+  width: 95%;
+  margin-top: 10px;
+}
+
+.display-img{
+
+  min-width: 300px;
+}
+
+.display-info{
+  min-width: 300px;
+}
+
+.display-review{
+  min-width: 300px;
+}
+
+
+
+
+
 
 .Modal-btn{
   background-color: tomato;

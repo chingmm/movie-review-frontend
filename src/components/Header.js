@@ -35,7 +35,7 @@ const Header = (props) => {
     <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="/lp">Home</Navbar.Brand>
         <Nav className="mr-auto">
-            <Nav.Link href="/movcomp">Movie Reviews</Nav.Link>
+            <Nav.Link href="/movcomp">My Reviews</Nav.Link>
             <Nav.Link href="/signup">Signup</Nav.Link>
             <Nav.Link href="/login">Login</Nav.Link>
             <Nav.Link href="/logout">Logout</Nav.Link>

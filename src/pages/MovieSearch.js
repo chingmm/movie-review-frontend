@@ -8,7 +8,7 @@ const MovieSearch = (props) => {
     return(
         <div >
         <form action="">
-        <input type="text" placeholder='Search...' onChange={props.handleChange} value={props.searchInput}
+        <input type="text" placeholder='Look for a movie...' onChange={props.handleChange} value={props.searchInput}
         />
         <button onClick={props.handleClick} >Search</button>
       </form>
