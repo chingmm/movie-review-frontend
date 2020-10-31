@@ -54,12 +54,18 @@ img {
 }
 
 .list-group {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .list-group-item {
   font-size: 30px;
 }
+
+main {
+  /* background-color: black; */
+  /* margin-top: 20px; */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -279,12 +285,17 @@ img {
   background-color: tomato;
 }
 
+.signinlogin {
+  text-align: right;
+}
 
 .modal-pop{
   background-color: teal;
 }
 
-
+.image {
+  box-shadow: 5px 10px;
+}
 
 @keyframes App-logo-spin {
   from {
