@@ -248,10 +248,15 @@ main{
  
 }
 
+.mov-name{
+  color: white;
+  padding: 2px;
+
+}
 .col-md-4-col-6  {
   display: flex;
   flex-direction: column;
-  background-color:lightgrey; 
+  background-color:rgb(87, 81, 81); 
   height: 480px;
   margin: 5px;
   max-width: 250px;
@@ -280,7 +285,8 @@ main{
 
 .MuiRating-root{
   width: 150px;
-  margin-left:0px
+  margin-left:48px;
+  color: white;
 }
 
 .MuiBox-root{
@@ -290,6 +296,7 @@ main{
   padding-left:0px;
   
 }
+
 
 .review{
   border-radius: 5px;
@@ -313,13 +320,21 @@ main{
 
 #textarea {
   display: flex;
-  min-width: 350px;
-  min-height: 100px;
+  min-width: 450px;
+  min-height: 200px;
   font-family: serif;
   font-size: 16px;
   border-radius: 7px;
   background-color:whitesmoke;
   /* margin-inline-start:45px; */
+}
+
+.add{
+  width: 250px;
+  margin-top: 7px;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: red;
 }
 
 .input-output{
@@ -332,18 +347,72 @@ main{
 
 }
 
+.input-output-modal{
+  display: grid;
+  /* flex-direction: row; */
+  /* grid-template-columns: 1fr 2fr; */
+  margin: auto;
+  background-color: black;
+  margin:15px;
+  justify-content: center;
+  height: 250px;
+  overflow: hidden;
+
+}
+
+
+
+.delete-btn{
+  width: 83px;
+  margin-top: 7px;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: red;
+  margin-bottom: 5px;
+  margin-top: 45px;
+}
+
 .output{
   /* width: 750px; */
-  background-color: rgb(97, 23, 23);
+  /* background-color: rgb(97, 23, 23); */
   max-height: 650px;
+  overflow: scroll;
 }
+
 
 .outputtxt{
   /* width: 850px; */
   display: flex;
   flex-direction: row;
-  height: 250px;
+  height: auto;
   border: none;
+  background-color:rgb(87, 81, 81); 
+  margin: 10px;
+  color: azure;
+}
+
+.userreview-output{
+  color: whitesmoke;
+  
+
+}
+
+.outputtxt-modal{
+  /* width: 850px; */
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border: none;
+  /* background-color:rgb(87, 81, 81);  */
+  justify-content: center;
+  overflow: scroll;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
 
 ul{
@@ -352,25 +421,79 @@ ul{
 }
 
 .display-img{
+  display: flex;
+  flex-basis:250px ;
+  align-content: center;
+/* min-width: 300px;
+max-width: ; */
+}
 
-  min-width: 300px;
+.display-img img{
+  display: flex;
+  /* flex-basis:350px ; */
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 250;
+  max-height: 250px;
+  /* flex-basis:350px ; */
+  align-content: center;
+  margin-top: 2px;
 }
 
 .display-info{
-  min-width: 300px;
+  min-width: 275px;
+  font: 20px;
+  font-weight: bold ;
+
+}
+
+hr{
+  height: 5px;
+}
+
+ul{
+  margin: 5px;
 }
 
 .display-review{
-  min-width: 300px;
+  min-width: 375px;
+  font: 18px;
+  font-weight: lighter;
+  padding-right: 7px;
+}
+
+
+.hide{
+  visibility: hidden;
 }
 
 
 
+.display-img-modal{
+  display: flex;
+  flex-basis:250px ;
+  align-content: center;
+/* min-width: 300px;
+max-width: ; */
+}
 
-
+.display-img-modal img{
+  display: flex;
+  /* flex-basis:350px ; */
+  min-width: 200px;
+  max-width: 250px;
+  max-height: 250px;
+  flex-basis:350px ;
+  align-content: center;
+  margin-top: 2px;
+}
 
 .Modal-btn{
-  background-color: tomato;
+  background-color: red;
+}
+
+.edit-btn{
+ width:200px;
 }
 
 .signinlogin {
@@ -378,11 +501,21 @@ ul{
 }
 
 .modal-pop{
-  background-color: teal;
+  /* background-color: teal; */
+  background-color:rgb(87, 81, 81); 
+
+}
+
+.modal-dialog{
+  width: 500px;
 }
 
 .image {
   box-shadow: 5px 10px;
+}
+
+footer{
+  background-color: black;
 }
 
 @keyframes App-logo-spin {
