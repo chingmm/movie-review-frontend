@@ -1,68 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#General Info
+Let's users search for movies to watch, and also review movies that they have watched
 
-## Available Scripts
+#Technologies Used
+- Nodejs
+- React
+- Bootstrap
+- Mongoose
+- Express
+- CSS
+- Axios
 
-In the project directory, you can run:
+#Description
+The team used full CRUD app using the MERN stack to create an app that allows users to search for films and create, edit or delete film reviews.
+The project utilizes a pull from a third party API + Authorization with signup, login and logout functionality.
 
-### `yarn start`
+#External API
+The external API pulls from themoviedb.org, and is used to build out a search functionality for the end use to look up movies containing their search words (ex: Frozen). Details such as the movie title, release date, movie description, and popularity are pulled to give the user some insights about the movie and help them decide what movie to watch next.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#Authorization
+For authorization, auth folder was created with index.js file which contains JWT authentication which allows the server to generate a token to certify the user identity and send it to the client. Then the client sends the token back to the server for every subsequent request, so the server knows the request comes from a specific identity.
+For controllers folder, we created 2 files:
+1)   Movies. Js: with index, create, update, delete routes.
+2)   User.js: with 2 routers for signup and login using username and password.
+Db folder has 1 file: db.js which connects to mongoose to signal successful connection to mongoose.
+For models, we have 2 of them:
+1)   Movies.js which contains movie schema
+2)   User.js which contains user schema
+Server.js folder: contains the middle, router and listeners.
